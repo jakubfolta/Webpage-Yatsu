@@ -1,5 +1,30 @@
+:root {
+  // Colors
+  --color-primary: hsl(113, 99%, 42%);
+  --color-primary-dark: hsl(113, 99%, 22%);
+  --color-primary-light: hsl(113, 99%, 62%);
+
+  --color-grey-light-1: hsl(0, 9%, 97%);
+  --color-grey-light-2: hsl(0, 12%, 95%);
+  --color-grey-light-3: hsl(0, 9%, 93%);
+  --color-grey-light-4: hsl(0, 0%, 80%);
+
+  --color-grey-dark-1: hsl(0, 0%, 20%);
+  --color-grey-dark-2: hsl(0, 0%, 46%);
+  --color-grey-dark-3: hsl(0, 0%, 60%);
+
+  --color-white: hsl(0, 100%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+
+  --color-black-shadow: rgba($color-black, .3);
+
+  // Shadows
+  --box-shadow: 1rem 2rem 4rem var(--color-black-shadow);
+}
+
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
   line-height: 1.7;
+  color: var(--color-grey-dark-2);
 }

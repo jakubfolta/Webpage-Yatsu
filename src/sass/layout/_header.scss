@@ -1,0 +1,71 @@
+.header {
+  height: 7rem;
+  background-color: var(--color-white);
+  border-bottom: var(--color-grey-light-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+// LOGO
+.logo {
+  height: 3.25rem;
+  margin-left: 3rem;
+}
+
+// SEARCH
+.search {
+  flex: 0 0 40%;
+  position: relative;
+
+  &__input {
+    font-family: inherit;
+    border-radius: 3rem;
+    width: 90%;
+    height: 3rem;
+    background-color: var(--color-grey-light-3);
+    border: none;
+    padding: 1rem;
+  }
+
+  &__button {
+    position: absolute;
+    top: .3rem;
+    right: 4.5rem;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+// USER NAVIGATION
+.user-nav {
+  display: flex;
+  &__icon-box {
+
+  }
+
+  &__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  &__notification {
+
+  }
+
+  &__user {
+
+  }
+
+  &__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+  }
+
+  &__user-name {
+
+  }
+}
+
