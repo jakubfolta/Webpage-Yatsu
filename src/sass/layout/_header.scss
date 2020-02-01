@@ -1,4 +1,5 @@
 .header {
+  font-size: var(--default-font-size);
   height: 7rem;
   background-color: var(--color-white);
   border-bottom: var(--color-grey-light-2);
@@ -15,27 +16,51 @@
 // SEARCH
 .search {
   flex: 0 0 40%;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &__input {
+    font-size: inherit;
     font-family: inherit;
     border-radius: 3rem;
     width: 90%;
-    height: 3rem;
-    background-color: var(--color-grey-light-3);
+    background-color: var(--color-grey-light-2);
     border: none;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    margin-right: -2.8rem;
+    color: inherit;
+    transition: all .3s;
+
+    &::placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
   }
 
   &__button {
-    position: absolute;
-    top: .3rem;
-    right: 4.5rem;
+    border: none;
+    background-color: var(--color-grey-light-2);
+
+    &:focus { outline: none; }
+    &:active { transform: translateY(.2rem); }
+
   }
 
   &__icon {
     width: 2rem;
     height: 2rem;
+    fill: var(--color-grey-dark-3);
   }
 }
 
