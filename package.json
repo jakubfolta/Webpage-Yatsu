@@ -1,0 +1,28 @@
+{
+  "name": "webpage-yatsu",
+  "version": "1.0.0",
+  "description": "all-in-one booking app interface",
+  "main": "index.js",
+  "scripts": {
+    "test:html": "nu-html-checker index.html",
+
+    "devserver": "browser-sync start --server --files src/css/*.css *.html src/js/*.js",
+    "watch:sass": "node-sass src/sass/main.scss src/css/main.css -w",
+    "start": "npm-run-all --parallel devserver watch:sass",
+
+    "compile:sass": "node-sass src/sass/main.scss src/css/main.comp.css",
+    "concat:css": "concat -o src/css/main.concat.css src/css/icon-font.css src/css/main.comp.css",
+    "prefix:css": "autoprefixer-cli -o src/css/main.prefix.css src/css/main.concat.css",
+    "compress:css": "node-sass src/css/main.prefix.css src/css/main.min.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+  "author": "Jakub Folta",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "nu-html-checker": "^0.1.0"
+  }
+}
