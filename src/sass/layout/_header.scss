@@ -92,7 +92,19 @@
   }
 
   &__notification {
-    
+    font-size: .9rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    color: var(--color-white);
+    position: absolute;
+    top: 1.5rem;
+    right: 1.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__user {
