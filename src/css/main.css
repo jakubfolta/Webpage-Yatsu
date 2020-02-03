@@ -71,6 +71,10 @@ body {
       background-color: var(--color-primary);
       transform: scaleY(0);
       transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s; }
+    .side-nav__item:nth-child(even)::before {
+      transform-origin: top; }
+    .side-nav__item:nth-child(odd)::before {
+      transform-origin: bottom; }
     .side-nav__item:hover::before {
       transform: scaleY(1);
       width: 100%; }

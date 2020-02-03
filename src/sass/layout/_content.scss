@@ -36,6 +36,9 @@
                   width .4s cubic-bezier(1, 0, 0, 1) .2s;
     }
 
+    &:nth-child(even)::before { transform-origin: top; }
+    &:nth-child(odd)::before { transform-origin: bottom; }
+
     &:hover::before {
       transform: scaleY(1);
       width: 100%;
