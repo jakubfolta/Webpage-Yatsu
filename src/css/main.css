@@ -21,7 +21,7 @@ body {
 :root {
   --color-primary: hsl(113, 99%, 42%);
   --color-primary-dark: hsl(113, 99%, 22%);
-  --color-primary-light: hsl(113, 99%, 62%);
+  --color-primary-light: hsl(113, 99%, 48%);
   --color-grey-light-1: hsl(0, 9%, 97%);
   --color-grey-light-2: hsl(0, 12%, 95%);
   --color-grey-light-3: hsl(0, 9%, 93%);
@@ -58,7 +58,8 @@ body {
   list-style: none;
   font-size: var(--medium-font-size); }
   .side-nav__item {
-    position: relative; }
+    position: relative;
+    transition: background-color .3s; }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
     .side-nav__item::before {
@@ -78,6 +79,8 @@ body {
     .side-nav__item:hover::before, .side-nav__item:first-child::before {
       transform: scaleY(1);
       width: 100%; }
+    .side-nav__item:active::before {
+      background-color: var(--color-primary-light); }
   .side-nav__link:link, .side-nav__link:visited {
     position: relative;
     text-transform: uppercase;

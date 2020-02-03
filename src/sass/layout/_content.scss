@@ -18,10 +18,9 @@
 
   &__item {
     position: relative;
+    transition: background-color .3s;
 
-    &:not(:last-child) {
-      margin-bottom: .5rem;
-    }
+    &:not(:last-child) { margin-bottom: .5rem; }
 
     &::before {
       content: '';
@@ -44,6 +43,8 @@
       transform: scaleY(1);
       width: 100%;
     }
+
+    &:active::before { background-color: var(--color-primary-light); }
   }
 
   &__link:link,
