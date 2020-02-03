@@ -18,7 +18,6 @@
 
   &__item {
     position: relative;
-    z-index: 1000;
 
     &:not(:last-child) {
       margin-bottom: .5rem;
@@ -32,7 +31,6 @@
       height: 100%;
       width: .3rem;
       background-color: var(--color-primary);
-      z-index: -1;
       transform: scaleY(0);
       transition: transform .2s,
                   width .4s cubic-bezier(1, 0, 0, 1) .2s;
@@ -46,6 +44,7 @@
 
   &__link:link,
   &__link:visited {
+    position: relative;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--color-grey-light-1);
@@ -53,6 +52,7 @@
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
+    z-index: 1000;
   }
 
   &__icon {

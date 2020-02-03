@@ -58,8 +58,7 @@ body {
   list-style: none;
   font-size: var(--medium-font-size); }
   .side-nav__item {
-    position: relative;
-    z-index: 1000; }
+    position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
     .side-nav__item::before {
@@ -70,20 +69,21 @@ body {
       height: 100%;
       width: .3rem;
       background-color: var(--color-primary);
-      z-index: -1;
       transform: scaleY(0);
       transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s; }
     .side-nav__item:hover::before {
       transform: scaleY(1);
       width: 100%; }
   .side-nav__link:link, .side-nav__link:visited {
+    position: relative;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--color-grey-light-1);
     display: block;
     padding: 1rem 2rem;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    z-index: 1000; }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
