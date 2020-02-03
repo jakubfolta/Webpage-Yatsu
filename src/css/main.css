@@ -63,7 +63,7 @@ body {
 
 .logo {
   height: 3.25rem;
-  margin-left: 3rem; }
+  margin-left: 2rem; }
 
 .search {
   flex: 0 0 40%;
@@ -122,9 +122,9 @@ body {
     height: 2.25rem;
     fill: var(--color-grey-dark-2); }
   .user-nav__notification {
-    font-size: .9rem;
-    width: 1.75rem;
-    height: 1.75rem;
+    font-size: .8rem;
+    width: 1.8rem;
+    height: 1.8rem;
     background-color: var(--color-primary);
     border-radius: 50%;
     color: var(--color-white);
