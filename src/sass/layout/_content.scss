@@ -39,7 +39,8 @@
     &:nth-child(even)::before { transform-origin: top; }
     &:nth-child(odd)::before { transform-origin: bottom; }
 
-    &:hover::before {
+    &:hover::before,
+    &:first-child::before {
       transform: scaleY(1);
       width: 100%;
     }
