@@ -43,6 +43,12 @@ body {
   line-height: 1.7;
   color: var(--color-grey-dark-2); }
 
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
 .content {
   display: flex; }
 
