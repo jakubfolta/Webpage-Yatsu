@@ -5,3 +5,15 @@
   box-shadow: var(--box-shadow);
   min-height: 50rem;
 }
+
+.content {
+  display: flex;
+}
+
+// HOTEL OVERVIEW
+.hotel-view {
+  flex: 1 ;
+
+  // TEST
+  height: 80rem;
+}

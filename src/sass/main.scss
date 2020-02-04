@@ -1,9 +1,11 @@
 @import "base/base";
 @import "base/typography";
 
+@import "components/button";
 @import "components/gallery";
 
-@import "layout/content";
 @import "layout/header";
+@import "layout/overview";
+@import "layout/sidebar";
 
 @import "pages/home";
