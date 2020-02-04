@@ -53,7 +53,7 @@ body {
   font-size: var(--default-font-size);
   height: 7rem;
   background-color: var(--color-white);
-  border-bottom: var(--color-grey-light-2);
+  border-bottom: 0.2rem solid var(--color-grey-light-2);
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -141,7 +141,8 @@ body {
 
 .overview {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  border-bottom: 0.2rem solid var(--color-grey-light-2); }
   .overview__icon-star, .overview__icon-location {
     width: 1.75rem;
     height: 1.75rem; }
@@ -207,7 +208,7 @@ body {
 .container {
   max-width: 120rem;
   margin: 8rem auto;
-  background-color: var(--color-grey-light-2);
+  background-color: var(--color-grey-light-1);
   box-shadow: var(--box-shadow);
   min-height: 50rem; }
 
