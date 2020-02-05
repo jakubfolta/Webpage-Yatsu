@@ -1,5 +1,7 @@
 .overview {
-  
+  display: flex;
+  align-items: center;
+  border-bottom: .2rem solid var(--color-grey-light-2);
 
   &__heading {
 
