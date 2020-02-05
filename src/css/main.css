@@ -205,13 +205,6 @@ body {
   text-align: center;
   padding: 2.5rem 3rem; }
 
-.container {
-  max-width: 120rem;
-  margin: 8rem auto;
-  background-color: var(--color-grey-light-1);
-  box-shadow: var(--box-shadow);
-  min-height: 50rem; }
-
 .content {
   display: flex; }
 
