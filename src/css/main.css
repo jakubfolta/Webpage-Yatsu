@@ -71,6 +71,10 @@ body {
     outline: none;
     animation: pulsate .8s infinite; }
 
+.list {
+  display: flex;
+  list-style: none; }
+
 .gallery {
   display: flex; }
   .gallery__photo {
@@ -280,7 +284,7 @@ body {
   background-color: var(--color-grey-light-1);
   padding: 4.5rem;
   border-bottom: var(--border-bottom);
-  font-size: var(f); }
+  font-size: var(--medium-font-size); }
   .detail .description {
     background-color: var(--color-white);
     margin-right: 4.5rem;
