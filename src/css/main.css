@@ -4,7 +4,7 @@
     box-shadow: none; }
   50% {
     transform: scale(1.05);
-    box-shadow: 0 1rem 3rem var(--color-black); }
+    box-shadow: 0 1rem 4rem var(--color-black); }
   100% {
     transform: scale(1);
     box-shadow: none; } }
@@ -181,8 +181,27 @@ body {
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary); }
+  .overview__icon-location {
+    margin-right: .5rem; }
   .overview__location {
-    margin-left: auto; }
+    margin-left: auto;
+    display: flex;
+    align-items: center; }
+  .overview__rating {
+    margin-left: 2rem;
+    padding: .3rem .6rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    align-self: stretch; }
+    .overview__rating-average {
+      font-size: 2.25rem;
+      font-weight: 300;
+      margin-bottom: -.7rem; }
+    .overview__rating-count {
+      font-size: .8rem;
+      font-weight: 600;
+      text-transform: uppercase; }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
