@@ -4,17 +4,23 @@
   border-bottom: .2rem solid var(--color-grey-light-2);
 
   &__heading {
-
+    font-size: 2.5;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    text-transform: capitalize;
+    padding: 1rem 2rem;
   }
 
   &__stars {
-
+    display: flex;
   }
 
   &__icon-star,
   &__icon-location {
     width: 1.75rem;
     height: 1.75rem;
+
+    fill: var(--color-primary);
   }
 
   &__location {
