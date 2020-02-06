@@ -36,6 +36,11 @@
     flex: 0 0 60%;
     padding: 3rem;
     box-shadow: var(--shadow-light);
+
+    .paragraph {
+
+    }
+
   }
 
   .user-reviews {
@@ -43,3 +48,23 @@
     flex: 1;
   }
 }
+
+.recommend {
+
+  &__count {
+
+  }
+
+  &__friends {
+
+  }
+
+  &__photo {
+    
+  }
+}
+
+
+
+
+
