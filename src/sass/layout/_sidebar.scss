@@ -1,7 +1,3 @@
-.content {
-  display: flex;
-}
-
 // SIDE NAVIGATION
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -75,12 +71,3 @@
   text-align: center;
   padding: 2.5rem 3rem;
 }
-
-.hotel-view {
-  flex: 1 ;
-
-  // TEST
-  background-color: greenyellow;
-  height: 80rem;
-}
-

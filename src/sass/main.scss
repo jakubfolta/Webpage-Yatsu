@@ -1,7 +1,12 @@
+@import "base/animations";
 @import "base/base";
 @import "base/typography";
 
-@import "layout/content";
+@import "components/button";
+@import "components/gallery";
+
 @import "layout/header";
+@import "layout/overview";
+@import "layout/sidebar";
 
 @import "pages/home";
