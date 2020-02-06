@@ -7,27 +7,10 @@
   padding-bottom: .2rem;
   cursor: pointer;
   transition: all .3s;
-  box-shadow: var(--box-shadow);
 
   &:hover { color: inherit; }
   &:focus {
     outline: none;
-    animation: pulsate 1s;
-  }
-}
-
-@keyframes pulsate {
-  0% {
-
-  }
-
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 1rem 4rem var(--box-shadow);
-  }
-
-  100% {
-    transform: scale(1);
-    box-shadow: none;
+    animation: pulsate .8s infinite;
   }
 }

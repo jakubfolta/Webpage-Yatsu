@@ -13,8 +13,12 @@
   --color-grey-dark-2: hsl(0, 0%, 46%);
   --color-grey-dark-3: hsl(0, 0%, 60%);
 
-  --color-white: hsl(0, 100%, 100%);
-  --color-black: hsl(0, 0%, 0%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 3%, 5%);
+
+  // Shadows
+  --box-shadow-big: 1rem 2rem 4rem var(--color-black);
+  --box-shadow-small: 0 1rem 4rem var(--color-black);
 
   // Fonts
   --default-font-size: 1.6rem;
