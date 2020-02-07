@@ -334,7 +334,7 @@ body {
 .container {
   max-width: 120rem;
   margin: 8rem auto;
-  background-color: var(--color-grey-light-1);
+  background-color: var(--color-white);
   box-shadow: var(--box-shadow-big);
   min-height: 50rem; }
 
@@ -386,3 +386,12 @@ body {
     border: 0.3rem solid var(--color-white); }
     .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+  .cta__heading {
+    font-size: var(--big-font-size);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 2rem; }
