@@ -19,12 +19,15 @@
   // Shadows
   --box-shadow-big: 1rem 2rem 4rem var(--color-black);
   --box-shadow-small: 0 1rem 4rem var(--color-black);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0, .6);
 
   // Fonts
   --default-font-size: 1.6rem;
   --small-font-size: 1.2rem;
   --medium-font-size: 1.4rem;
 
+  // Borders
+  --line: .2rem solid var(--color-grey-light-2);
 }
 
 body {
