@@ -10,27 +10,34 @@
 
   &__user {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
   }
 
   &__photo {
-    width: 4rem;
-    height: 4rem;
+    width: 4.5rem;
+    height: 4.5rem;
     border-radius: 50%;
   }
 
   &__user-box {
-
+    margin-right: auto;
+    margin-left: 2rem;
   }
 
-  &__name {
-
+  &__user-name {
+    font-size: var(--default-font-size);
+    font-weight: 600;
   }
 
-  &__date {
-
+  &__user-date {
+    font-size: var(--small-font-size);
+    font-weight: 400;
   }
 
   &__rating {
-
+    font-size: var(--big-font-size);
+    color: var(--color-primary);
   }
 }
