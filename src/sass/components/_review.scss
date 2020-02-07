@@ -1,0 +1,60 @@
+.review {
+  position: relative;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+
+  &::before {
+    content: '\201C';
+    position: absolute;
+    top: -2.8rem;
+    left: -.8rem;
+    display: inline-block;
+    font-size: 20rem;
+    font-family: sans-serif;
+    color: var(--color-grey-light-2);
+    line-height: 1;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1000;
+  }
+
+  &__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  &__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+  }
+
+  &__user-box {
+    margin-right: auto;
+    margin-left: 2rem;
+  }
+
+  &__user-name {
+    font-size: var(--default-font-size);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__user-date {
+    font-size: var(--small-font-size);
+    font-weight: 400;
+    color: var(--color-grey-dark-3);
+  }
+
+  &__rating {
+    font-size: var(--big-font-size);
+    color: var(--color-primary);
+  }
+}

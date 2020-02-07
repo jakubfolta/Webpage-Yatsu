@@ -43,11 +43,12 @@ body {
   --color-white: hsl(0, 0%, 100%);
   --color-black: hsl(0, 3%, 5%);
   --box-shadow-big: 1rem 2rem 4rem var(--color-black);
-  --box-shadow-small: 0 1rem 4rem var(--color-black);
-  --shadow-light: 0 2rem 5rem rgba(0,0,0, .6);
+  --box-shadow-small: 0 1rem 3rem var(--color-black);
+  --shadow-light: 0 1rem 3rem rgba(0,0,0, .4);
   --default-font-size: 1.6rem;
   --small-font-size: 1.2rem;
   --medium-font-size: 1.4rem;
+  --big-font-size: 2.2rem;
   --line: .2rem solid var(--color-grey-light-2); }
 
 body {
@@ -65,8 +66,13 @@ body {
   padding-bottom: .2rem;
   cursor: pointer;
   transition: all .3s; }
+  .btn-inline .btn-arrow {
+    margin-left: 1rem;
+    transition: margin .5s; }
   .btn-inline:hover {
     color: inherit; }
+    .btn-inline:hover .btn-arrow {
+      margin-left: 1.5rem; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate .8s infinite; }
@@ -141,6 +147,50 @@ body {
       font-size: .8rem;
       font-weight: 600;
       text-transform: uppercase; }
+
+.review {
+  position: relative;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  overflow: hidden; }
+  .review::before {
+    content: '\201C';
+    position: absolute;
+    top: -2.8rem;
+    left: -.8rem;
+    display: inline-block;
+    font-size: 20rem;
+    font-family: sans-serif;
+    color: var(--color-grey-light-2);
+    line-height: 1; }
+  .review__text {
+    position: relative;
+    z-index: 1000; }
+  .review__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem; }
+  .review__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%; }
+  .review__user-box {
+    margin-right: auto;
+    margin-left: 2rem; }
+  .review__user-name {
+    font-size: var(--default-font-size);
+    font-weight: 600;
+    text-transform: uppercase; }
+  .review__user-date {
+    font-size: var(--small-font-size);
+    font-weight: 400;
+    color: var(--color-grey-dark-3); }
+  .review__rating {
+    font-size: var(--big-font-size);
+    color: var(--color-primary); }
 
 .header {
   font-size: var(--default-font-size);
@@ -316,8 +366,10 @@ body {
     .detail .description .paragraph:not(:last-of-type) {
       margin-bottom: 2rem; }
   .detail .user-reviews {
-    background-color: yellowgreen;
-    flex: 1; }
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
 
 .recommend {
   font-size: var(--small-font-size);
