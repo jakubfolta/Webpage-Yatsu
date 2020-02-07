@@ -66,8 +66,13 @@ body {
   padding-bottom: .2rem;
   cursor: pointer;
   transition: all .3s; }
+  .btn-inline .btn-arrow {
+    margin-left: 1rem;
+    transition: margin .5s; }
   .btn-inline:hover {
     color: inherit; }
+    .btn-inline:hover .btn-arrow {
+      margin-left: 1.5rem; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate .8s infinite; }
@@ -361,7 +366,10 @@ body {
     .detail .description .paragraph:not(:last-of-type) {
       margin-bottom: 2rem; }
   .detail .user-reviews {
-    flex: 1; }
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
 
 .recommend {
   font-size: var(--small-font-size);

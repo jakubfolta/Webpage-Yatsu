@@ -8,7 +8,19 @@
   cursor: pointer;
   transition: all .3s;
 
-  &:hover { color: inherit; }
+  .btn-arrow {
+    margin-left: 1rem;
+    transition: margin .5s;
+  }
+
+  &:hover {
+    color: inherit;
+
+    .btn-arrow {
+      margin-left: 1.5rem;
+    }
+  }
+
   &:focus {
     outline: none;
     animation: pulsate .8s infinite;
