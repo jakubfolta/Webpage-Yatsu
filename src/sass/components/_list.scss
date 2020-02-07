@@ -13,7 +13,9 @@
     &::before {
       content: '';
       display: inline-block;
-      background-image: url(../../img/chevron-thin-right.svg);
+      height: 2rem;
+      width: 2rem;
+      background-image: url(../../img/SVG/chevron-thin-right.svg);
     }
   }
 }
