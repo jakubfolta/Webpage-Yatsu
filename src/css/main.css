@@ -84,10 +84,16 @@ body {
     .list__item::before {
       content: '';
       display: inline-block;
-      height: 2rem;
-      width: 2rem;
+      height: 1rem;
+      width: 1rem;
       margin-right: .7rem;
       background-image: url(../img/chevron-thin-right.svg); }
+      @supports (-webkit-mask-image: url(../img/chevron-thin-right.svg)) {
+        .list__item::before {
+          background-image: none;
+          background-color: var(--color-primary);
+          -webkit-mask-image: url(../img/chevron-thin-right.svg);
+          -webkit-mask-size: cover; } }
 
 .gallery {
   display: flex; }
