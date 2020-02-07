@@ -37,9 +37,7 @@
     padding: 3rem;
     box-shadow: var(--shadow-light);
 
-    .paragraph {
-
-    }
+    .paragraph:not(:last-of-type) { margin-bottom: 2rem; }
   }
 
   .user-reviews {

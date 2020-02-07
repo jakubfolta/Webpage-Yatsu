@@ -48,7 +48,7 @@ body {
   --default-font-size: 1.6rem;
   --small-font-size: 1.2rem;
   --medium-font-size: 1.4rem;
-  --border-bottom: .2rem solid var(--color-grey-light-2); }
+  --line: .2rem solid var(--color-grey-light-2); }
 
 body {
   font-family: 'Josefin Sans', sans-serif;
@@ -72,8 +72,19 @@ body {
     animation: pulsate .8s infinite; }
 
 .list {
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
   display: flex;
+  flex-wrap: wrap;
   list-style: none; }
+  .list__item {
+    flex: 0 0 50%; }
+    .list__item::before {
+      content: '';
+      display: inline-block;
+      background-image: url(../../img/chevron-thin-right.svg); }
 
 .gallery {
   display: flex; }
@@ -84,7 +95,7 @@ body {
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: var(--border-bottom);
+  border-bottom: var(--line);
   background-color: var(--color-white); }
   .overview__heading {
     font-size: 2.5;
@@ -124,7 +135,7 @@ body {
   font-size: var(--default-font-size);
   height: 7rem;
   background-color: var(--color-white);
-  border-bottom: var(--border-bottom);
+  border-bottom: var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -291,6 +302,8 @@ body {
     flex: 0 0 60%;
     padding: 3rem;
     box-shadow: var(--shadow-light); }
+    .detail .description .paragraph:not(:last-of-type) {
+      margin-bottom: 2rem; }
   .detail .user-reviews {
     background-color: yellowgreen;
     flex: 1; }

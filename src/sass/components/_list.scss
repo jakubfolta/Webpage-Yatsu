@@ -1,8 +1,19 @@
 .list {
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
-  
-  &__item {
 
+  &__item {
+    flex: 0 0 50%;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      background-image: url(../../img/chevron-thin-right.svg);
+    }
   }
 }
