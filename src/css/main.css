@@ -142,6 +142,14 @@ body {
       font-weight: 600;
       text-transform: uppercase; }
 
+.review__user {
+  display: flex; }
+
+.review__photo {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%; }
+
 .header {
   font-size: var(--default-font-size);
   height: 7rem;
