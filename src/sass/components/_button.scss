@@ -42,15 +42,17 @@
   box-shadow: var(--shadow-light), 0 0 0 .2rem var(--color-primary);
   background-image: linear-gradient(to bottom right, var(--color-primary-light), var(--color-primary-dark));
   cursor: pointer;
-  // overflow: hidden;
+  overflow: hidden;
   transition: all .3s;
 
-  &:hover { box-shadow: var(--shadow-light), 0 0 0 .2rem var(--color-primary), 0 0 0 .3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light) }
+  &:hover { box-shadow: var(--shadow-light), 0 0 0 .2rem var(--color-primary), 0 0 0 .3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light), 0 0 4rem var(--color-primary-light) }
 
-  &:hover > * { transform: translateY(100%); }
+  &:hover > * { animation: swap 3s 1s; }
 
-  &:focus {
-    outline: none;
+  &:focus { outline: none; }
+  &:active {
+    transform: translateY(.2rem);
+    box-shadow: var(--shadow-very-light), 0 0 0 .2rem var(--color-primary), 0 0 0 .3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light), 0 0 4rem var(--color-primary-light)
   }
 
   &__visible,
@@ -58,7 +60,6 @@
   &__invisible--2 {
     display: inline-block;
     padding: 2rem 7.5rem;
-    transition: all .5s;
   }
 
   &__invisible--1,
@@ -71,10 +72,7 @@
     padding: 2rem 0;
   }
 
-  &__invisible--2 {
-    top: -200%;
-    color: black;
-  }
+  &__invisible--2 { top: -200%; }
 }
 
 
