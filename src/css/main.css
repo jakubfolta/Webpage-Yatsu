@@ -102,21 +102,21 @@ body {
   .btn:hover {
     box-shadow: var(--shadow-light), 0 0 0 0.2rem var(--color-primary), 0 0 0 0.3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light), 0 0 4rem var(--color-primary-light); }
   .btn:hover > * {
-    animation: swap 3s 1s; }
+    animation: swap 3s 1s infinite; }
   .btn:focus {
     outline: none; }
   .btn:active {
     transform: translateY(0.2rem);
     box-shadow: var(--shadow-very-light), 0 0 0 0.2rem var(--color-primary), 0 0 0 0.3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light), 0 0 4rem var(--color-primary-light); }
-  .btn__visible, .btn__invisible--1, .btn__invisible--2 {
+  .btn > * {
     display: inline-block;
-    padding: 2rem 7.5rem; }
+    padding: 2rem 7.5rem;
+    width: 100%;
+    height: 100%; }
   .btn__invisible--1, .btn__invisible--2 {
     position: absolute;
     left: 0;
     top: -100%;
-    width: 100%;
-    height: 100%;
     padding: 2rem 0; }
   .btn__invisible--2 {
     top: -200%; }
