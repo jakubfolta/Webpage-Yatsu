@@ -9,6 +9,14 @@
     transform: scale(1);
     box-shadow: none; } }
 
+@keyframes swap {
+  0% {
+    transform: translateY(0%); }
+  50% {
+    transform: translateY(100%); }
+  100% {
+    transform: translateY(200%); } }
+
 *,
 *::before,
 *::after {
@@ -44,6 +52,7 @@ body {
   --color-black: hsl(0, 3%, 5%);
   --box-shadow-big: 1rem 2rem 4rem var(--color-black);
   --box-shadow-small: 0 1rem 3rem var(--color-black);
+  --shadow-very-light: 0 .6rem 2rem rgba(0,0,0, .4);
   --shadow-light: 0 1rem 3rem rgba(0,0,0, .4);
   --default-font-size: 1.6rem;
   --small-font-size: 1.2rem;
@@ -76,6 +85,41 @@ body {
   .btn-inline:focus {
     outline: none;
     animation: pulsate .8s infinite; }
+
+.btn {
+  position: relative;
+  font-size: var(--default-font-size);
+  font-weight: 300;
+  color: var(--color-white);
+  text-transform: uppercase;
+  border-radius: 10rem;
+  border: none;
+  box-shadow: var(--shadow-light), 0 0 0 0.2rem var(--color-primary);
+  background-image: linear-gradient(to bottom right, var(--color-primary-light), var(--color-primary-dark));
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .3s; }
+  .btn:hover {
+    box-shadow: var(--shadow-light), 0 0 0 0.2rem var(--color-primary), 0 0 0 0.3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light), 0 0 4rem var(--color-primary-light); }
+  .btn:hover > * {
+    animation: swap 3s 1s infinite; }
+  .btn:focus {
+    outline: none; }
+  .btn:active {
+    transform: translateY(0.2rem);
+    box-shadow: var(--shadow-very-light), 0 0 0 0.2rem var(--color-primary), 0 0 0 0.3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light), 0 0 4rem var(--color-primary-light); }
+  .btn > * {
+    display: inline-block;
+    padding: 2rem 7.5rem;
+    width: 100%;
+    height: 100%; }
+  .btn__invisible--1, .btn__invisible--2 {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    padding: 2rem 0; }
+  .btn__invisible--2 {
+    top: -200%; }
 
 .list {
   margin: 3rem 0;
@@ -334,7 +378,7 @@ body {
 .container {
   max-width: 120rem;
   margin: 8rem auto;
-  background-color: var(--color-grey-light-1);
+  background-color: var(--color-white);
   box-shadow: var(--box-shadow-big);
   min-height: 50rem; }
 
@@ -386,3 +430,12 @@ body {
     border: 0.3rem solid var(--color-white); }
     .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+  .cta__heading {
+    font-size: var(--big-font-size);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 2rem; }

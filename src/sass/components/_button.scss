@@ -26,3 +26,58 @@
     animation: pulsate .8s infinite;
   }
 }
+
+.btn {
+  position: relative;
+  font-size: var(--default-font-size);
+  font-weight: 300;
+  color: var(--color-white);
+  text-transform: uppercase;
+  border-radius: 10rem;
+  border: none;
+
+  box-shadow: var(--shadow-light), 0 0 0 .2rem var(--color-primary);
+  background-image: linear-gradient(to bottom right, var(--color-primary-light), var(--color-primary-dark));
+
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .3s;
+
+  &:hover { box-shadow: var(--shadow-light), 0 0 0 .2rem var(--color-primary), 0 0 0 .3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light), 0 0 4rem var(--color-primary-light) }
+
+  &:hover > * { animation: swap 3s 1s infinite; }
+  &:focus { outline: none; }
+  &:active {
+    transform: translateY(.2rem);
+    box-shadow: var(--shadow-very-light), 0 0 0 .2rem var(--color-primary), 0 0 0 .3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light), 0 0 4rem var(--color-primary-light)
+  }
+
+  & > * {
+    display: inline-block;
+    padding: 2rem 7.5rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__invisible--1,
+  &__invisible--2 {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    padding: 2rem 0;
+  }
+
+  &__invisible--2 { top: -200%; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
