@@ -45,7 +45,7 @@
 
   &:hover { box-shadow: var(--shadow-light), 0 0 0 .2rem var(--color-primary), 0 0 0 .3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light), 0 0 4rem var(--color-primary-light) }
 
-  &:hover > * { animation: swap 3s 1s infinite; }
+  &:hover > * { animation: swap 3s 1s; }
   &:focus { outline: none; }
   &:active {
     transform: translateY(.2rem);
