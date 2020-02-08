@@ -28,10 +28,6 @@
 }
 
 .btn {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   position: relative;
   font-size: var(--default-font-size);
   font-weight: 300;
@@ -39,8 +35,10 @@
   text-transform: uppercase;
   border-radius: 10rem;
   border: none;
+
   box-shadow: var(--shadow-light), 0 0 0 .2rem var(--color-primary);
   background-image: linear-gradient(to bottom right, var(--color-primary-light), var(--color-primary-dark));
+
   cursor: pointer;
   overflow: hidden;
   transition: all .3s;
@@ -48,7 +46,6 @@
   &:hover { box-shadow: var(--shadow-light), 0 0 0 .2rem var(--color-primary), 0 0 0 .3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light), 0 0 4rem var(--color-primary-light) }
 
   &:hover > * { animation: swap 3s 1s; }
-
   &:focus { outline: none; }
   &:active {
     transform: translateY(.2rem);
