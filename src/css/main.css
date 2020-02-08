@@ -249,7 +249,7 @@ body {
     margin-right: auto;
     margin-left: 2rem; }
   .review__user-name {
-    font-size: var(--default-font-size);
+    font-size: var(--medium-font-size);
     font-weight: 600;
     text-transform: uppercase; }
   .review__user-date {
@@ -398,16 +398,25 @@ body {
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem 3rem; }
+  @media only screen and (max-width: 75em) {
+    .legal {
+      visibility: hidden; } }
 
 .container {
   max-width: 120rem;
   margin: 8rem auto;
   background-color: var(--color-white);
-  box-shadow: var(--box-shadow-big);
-  min-height: 50rem; }
+  box-shadow: var(--box-shadow-big); }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%; } }
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -415,6 +424,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  @media only screen and (max-width: 56.25em) {
+    .sidebar {
+      flex-direction: row; } }
 
 .hotel-view {
   flex: 1; }
@@ -444,8 +456,14 @@ body {
   color: var(--color-grey-dark-3);
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 75em) {
+    .recommend {
+      flex-direction: column; } }
   .recommend__count {
     margin-right: auto; }
+    @media only screen and (max-width: 75em) {
+      .recommend__count {
+        margin: 0; } }
   .recommend__photo {
     box-sizing: content-box;
     width: 4rem;

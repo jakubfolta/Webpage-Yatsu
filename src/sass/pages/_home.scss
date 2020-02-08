@@ -3,11 +3,19 @@
   margin: 8rem auto;
   background-color: var(--color-white);
   box-shadow: var(--box-shadow-big);
-  min-height: 50rem;
+
+  @include respond(tab-land) {
+    margin: 0;
+    max-width: 100%;
+  }
 }
 
 .content {
   display: flex;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
 }
 
 // SIDEBAR
@@ -17,6 +25,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include respond(tab-port) {
+    flex-direction: row;
+  }
 }
 
 // HOTEL OVERVIEW
@@ -54,7 +66,17 @@
   display: flex;
   align-items: center;
 
-  &__count { margin-right: auto; }
+  @include respond(tab-land) {
+    flex-direction: column;
+  }
+
+  &__count {
+    margin-right: auto;
+
+    @include respond(tab-land) {
+    margin: 0;
+    }
+  }
 
   &__photo {
     box-sizing: content-box;
@@ -63,7 +85,9 @@
     border-radius: 50%;
     border: .3rem solid var(--color-white);
 
-    &:not(:last-child) { margin-right: -1.5rem; }
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
   }
 }
 
