@@ -354,11 +354,6 @@ body {
   margin-top: 3rem;
   list-style: none;
   font-size: var(--medium-font-size); }
-  @media only screen and (max-width: 56.25em) {
-    .side-nav {
-      display: flex;
-      align-items: center;
-      margin-top: 0; } }
   .side-nav__item {
     position: relative; }
     @media only screen and (max-width: 56.25em) {
