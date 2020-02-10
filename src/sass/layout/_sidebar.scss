@@ -12,22 +12,12 @@
   &__item {
     position: relative;
 
-    @include respond(tab-port) {
-      flex: 1;
-    }
-
-    @include respond(phone) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    @include respond(tab-port) { flex: 1; }
 
     &:not(:last-child) {
       margin-bottom: .5rem;
 
-      @include respond(tab-port) {
-        margin-bottom: 0;
-      }
+      @include respond(tab-port) { margin-bottom: 0; }
     }
 
     &::before {
@@ -67,10 +57,12 @@
     z-index: 1000;
 
     @include respond(tab-port) {
-      justify-content: center;
-      padding: 2rem;
+      padding: 1.5rem;
+      flex-direction: column;
       align-items: center;
     }
+
+    @include respond(phone) { padding: .5rem; }
   }
 
   &__icon {
@@ -78,6 +70,11 @@
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+
+    @include respond(tab-port) {
+      margin-right: 0;
+      margin-bottom: .5rem;
+    }
   }
 }
 
@@ -88,7 +85,5 @@
   text-align: center;
   padding: 2.5rem 3rem;
 
-  @include respond(tab-land) {
-    display: none;
-  }
+  @include respond(tab-port) { display: none; }
 }

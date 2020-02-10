@@ -6,6 +6,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include respond(sphone) {
+    flex-wrap: wrap;
+    height: 10rem;
+  }
 }
 // LOGO
 .logo {
@@ -19,6 +24,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include respond(phone) { order: 1; }
+  @include respond(sphone) { flex: 0 0 100%; }
 
   &__input {
     font-size: inherit;

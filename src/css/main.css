@@ -1,4 +1,5 @@
 /*
+0 - 400px:      Small phone
 0 - 600px:      Phone
 600 - 900px:    Tablet portrait
 900 - 1200px:   Tablet landscape
@@ -6,6 +7,7 @@
 1800px + :      Big desktop
 
 $breakpoint argument choices:
+- sphone
 - phone
 - tab-port
 - tab-land
@@ -81,7 +83,7 @@ body {
   --default-font-size: 1.6rem;
   --small-font-size: 1.2rem;
   --medium-font-size: 1.4rem;
-  --big-font-size: 2.2rem;
+  --big-font-size: 2rem;
   --line: .2rem solid var(--color-grey-light-2); }
 
 body {
@@ -186,11 +188,15 @@ body {
   border-bottom: var(--line);
   background-color: var(--color-white); }
   .overview__heading {
-    font-size: 2.5;
+    font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: .1rem;
     text-transform: capitalize;
     padding: 1rem 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: var(--big-font-size);
+        padding: .8rem 1.2rem; } }
   .overview__stars {
     display: flex; }
   .overview__icon-star, .overview__icon-location {
@@ -210,8 +216,12 @@ body {
     color: var(--color-white);
     text-align: center;
     align-self: stretch; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        margin-left: 1rem;
+        padding: .1rem .4rem; } }
     .overview__rating-average {
-      font-size: 2.25rem;
+      font-size: var(--big-font-size);
       font-weight: 300;
       margin-bottom: -.7rem; }
     .overview__rating-count {
@@ -275,6 +285,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 25em) {
+    .header {
+      flex-wrap: wrap;
+      height: 10rem; } }
 
 .logo {
   height: 3.25rem;
@@ -285,6 +299,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .search {
+      order: 1; } }
+  @media only screen and (max-width: 25em) {
+    .search {
+      flex: 0 0 100%; } }
   .search__input {
     font-size: inherit;
     font-family: inherit;
@@ -370,11 +390,6 @@ body {
     @media only screen and (max-width: 56.25em) {
       .side-nav__item {
         flex: 1; } }
-    @media only screen and (max-width: 37.5em) {
-      .side-nav__item {
-        display: flex;
-        align-items: center;
-        justify-content: center; } }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
       @media only screen and (max-width: 56.25em) {
@@ -409,21 +424,28 @@ body {
     z-index: 1000; }
     @media only screen and (max-width: 56.25em) {
       .side-nav__link:link, .side-nav__link:visited {
-        justify-content: center;
-        padding: 2rem;
+        padding: 1.5rem;
+        flex-direction: column;
         align-items: center; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        padding: .5rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: .5rem; } }
 
 .legal {
   font-size: var(--small-font-size);
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem 3rem; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 56.25em) {
     .legal {
       display: none; } }
 
