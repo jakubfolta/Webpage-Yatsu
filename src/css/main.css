@@ -362,9 +362,7 @@ body {
     position: relative; }
     @media only screen and (max-width: 56.25em) {
       .side-nav__item {
-        flex: 1;
-        display: flex;
-        justify-content: center; } }
+        flex: 1; } }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
       @media only screen and (max-width: 56.25em) {
@@ -398,6 +396,10 @@ body {
     padding: 1rem 2rem;
     display: flex;
     z-index: 1000; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        justify-content: center;
+        padding: 2rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;

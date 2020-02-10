@@ -14,8 +14,6 @@
 
     @include respond(tab-port) {
       flex: 1;
-      display: flex;
-      justify-content: center;
     }
 
     &:not(:last-child) {
@@ -62,6 +60,11 @@
     padding: 1rem 2rem;
     display: flex;
     z-index: 1000;
+
+    @include respond(tab-port) {
+      justify-content: center;
+      padding: 2rem;
+    }
   }
 
   &__icon {
