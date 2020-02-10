@@ -362,7 +362,9 @@ body {
     position: relative; }
     @media only screen and (max-width: 56.25em) {
       .side-nav__item {
-        flex: 0 0 25%; } }
+        flex: 1;
+        display: flex;
+        justify-content: center; } }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
       @media only screen and (max-width: 56.25em) {

@@ -13,7 +13,9 @@
     position: relative;
 
     @include respond(tab-port) {
-      flex: 0 0 25%;
+      flex: 1;
+      display: flex;
+      justify-content: center;
     }
 
     &:not(:last-child) {
