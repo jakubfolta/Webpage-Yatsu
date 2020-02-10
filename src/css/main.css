@@ -454,6 +454,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .detail {
       padding: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
   .detail .description {
     background-color: var(--color-white);
     margin-right: 4.5rem;
@@ -464,6 +467,10 @@ body {
       .detail .description {
         padding: 2rem;
         margin-right: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .detail .description {
+        margin-right: 0;
+        margin-bottom: 2rem; } }
     .detail .description .paragraph:not(:last-of-type) {
       margin-bottom: 2rem; }
   .detail .user-reviews {
