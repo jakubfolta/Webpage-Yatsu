@@ -71,6 +71,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include respond(phone) {
+      align-items: stretch;
+    }
   }
 }
 
@@ -80,16 +84,15 @@
   display: flex;
   align-items: center;
 
-  @include respond(tab-land) {
-    flex-direction: column;
-  }
+  @include respond(tab-land) { flex-direction: column; }
+
+  @include respond(phone) { flex-direction: row; }
 
   &__count {
     margin-right: auto;
 
-    @include respond(tab-land) {
-    margin: 0;
-    }
+    @include respond(tab-land) { margin: 0; }
+    @include respond(phone) { margin-right: auto; }
   }
 
   &__photo {
