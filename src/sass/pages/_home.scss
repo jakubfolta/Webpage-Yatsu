@@ -38,12 +38,21 @@
   border-bottom: var(--border-bottom);
   font-size: var(--medium-font-size);
 
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
   .description {
     background-color: var(--color-white);
     margin-right: 4.5rem;
     flex: 0 0 60%;
     padding: 3rem;
     box-shadow: var(--shadow-light);
+
+    @include respond(tab-port) {
+    padding: 2rem;
+    margin-right: 2rem;
+    }
 
     .paragraph:not(:last-of-type) { margin-bottom: 2rem; }
   }

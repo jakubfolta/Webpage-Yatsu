@@ -223,6 +223,9 @@ body {
   padding: 3rem;
   margin-bottom: 3rem;
   overflow: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .review {
+      padding: 2rem; } }
   .review::before {
     content: '\201C';
     position: absolute;
@@ -447,12 +450,19 @@ body {
   padding: 4.5rem;
   border-bottom: var(--border-bottom);
   font-size: var(--medium-font-size); }
+  @media only screen and (max-width: 56.25em) {
+    .detail {
+      padding: 2rem; } }
   .detail .description {
     background-color: var(--color-white);
     margin-right: 4.5rem;
     flex: 0 0 60%;
     padding: 3rem;
     box-shadow: var(--shadow-light); }
+    @media only screen and (max-width: 56.25em) {
+      .detail .description {
+        padding: 2rem;
+        margin-right: 2rem; } }
     .detail .description .paragraph:not(:last-of-type) {
       margin-bottom: 2rem; }
   .detail .user-reviews {
