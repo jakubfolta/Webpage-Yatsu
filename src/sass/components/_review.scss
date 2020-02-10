@@ -7,7 +7,8 @@
   overflow: hidden;
 
   @include respond(tab-port) {
-  padding: 2rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
   }
 
   &::before {

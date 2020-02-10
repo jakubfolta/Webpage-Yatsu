@@ -225,7 +225,8 @@ body {
   overflow: hidden; }
   @media only screen and (max-width: 56.25em) {
     .review {
-      padding: 2rem; } }
+      padding: 2rem;
+      margin-bottom: 2rem; } }
   .review::before {
     content: '\201C';
     position: absolute;
@@ -496,6 +497,9 @@ body {
 .cta {
   padding: 3.5rem 0;
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .cta {
+      padding: 2rem 0; } }
   .cta__heading {
     font-size: var(--big-font-size);
     font-weight: 400;
