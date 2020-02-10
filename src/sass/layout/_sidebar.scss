@@ -16,6 +16,12 @@
       flex: 1;
     }
 
+    @include respond(phone) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     &:not(:last-child) {
       margin-bottom: .5rem;
 
@@ -56,7 +62,6 @@
     text-transform: uppercase;
     text-decoration: none;
     color: var(--color-grey-light-1);
-    display: block;
     padding: 1rem 2rem;
     display: flex;
     z-index: 1000;
@@ -64,6 +69,7 @@
     @include respond(tab-port) {
       justify-content: center;
       padding: 2rem;
+      align-items: center;
     }
   }
 

@@ -370,6 +370,11 @@ body {
     @media only screen and (max-width: 56.25em) {
       .side-nav__item {
         flex: 1; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__item {
+        display: flex;
+        align-items: center;
+        justify-content: center; } }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
       @media only screen and (max-width: 56.25em) {
@@ -399,14 +404,14 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: var(--color-grey-light-1);
-    display: block;
     padding: 1rem 2rem;
     display: flex;
     z-index: 1000; }
     @media only screen and (max-width: 56.25em) {
       .side-nav__link:link, .side-nav__link:visited {
         justify-content: center;
-        padding: 2rem; } }
+        padding: 2rem;
+        align-items: center; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
