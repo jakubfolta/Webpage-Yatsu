@@ -8,6 +8,10 @@
   cursor: pointer;
   transition: all .3s;
 
+  @include respond(phone) {
+  align-self: center;
+  }
+
   .btn-arrow {
     margin-left: 1rem;
     transition: margin .5s;

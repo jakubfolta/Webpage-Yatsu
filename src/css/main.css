@@ -99,6 +99,9 @@ body {
   padding-bottom: .2rem;
   cursor: pointer;
   transition: all .3s; }
+  @media only screen and (max-width: 37.5em) {
+    .btn-inline {
+      align-self: center; } }
   .btn-inline .btn-arrow {
     margin-left: 1rem;
     transition: margin .5s; }
