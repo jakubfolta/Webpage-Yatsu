@@ -357,7 +357,6 @@ body {
   @media only screen and (max-width: 56.25em) {
     .side-nav {
       display: flex;
-      align-items: center;
       margin-top: 0; } }
   .side-nav__item {
     position: relative; }
@@ -396,7 +395,6 @@ body {
     display: block;
     padding: 1rem 2rem;
     display: flex;
-    align-items: center;
     z-index: 1000; }
   .side-nav__icon {
     width: 1.75rem;
