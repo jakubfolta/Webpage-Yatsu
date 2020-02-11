@@ -66,10 +66,7 @@
   }
 
   &__icon {
-    width: 1.75rem;
-    height: 1.75rem;
-    margin-right: 2rem;
-    fill: currentColor;
+    
 
     @include respond(tab-port) {
       margin-right: 0;
