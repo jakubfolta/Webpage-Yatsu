@@ -430,10 +430,15 @@ body {
     @media only screen and (max-width: 37.5em) {
       .side-nav__link:link, .side-nav__link:visited {
         padding: .5rem; } }
-  @media only screen and (max-width: 56.25em) {
-    .side-nav__icon {
-      margin-right: 0;
-      margin-bottom: .5rem; } }
+  .side-nav__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: .5rem; } }
 
 .legal {
   font-size: var(--small-font-size);
