@@ -481,12 +481,6 @@ body {
   padding: 4.5rem;
   border-bottom: var(--border-bottom);
   font-size: var(--medium-font-size); }
-  @media only screen and (max-width: 56.25em) {
-    .detail {
-      padding: 2rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .detail {
-      flex-direction: column; } }
   .detail .description {
     background-color: var(--color-white);
     margin-right: 4.5rem;
