@@ -38,7 +38,13 @@
   border-bottom: var(--border-bottom);
   font-size: var(--medium-font-size);
 
-  
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
 
   .description {
     background-color: var(--color-white);
