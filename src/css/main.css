@@ -216,10 +216,6 @@ body {
     color: var(--color-white);
     text-align: center;
     align-self: stretch; }
-    @media only screen and (max-width: 37.5em) {
-      .overview__rating {
-        margin-left: 1rem;
-        padding: .1rem .4rem; } }
     .overview__rating-average {
       font-size: var(--big-font-size);
       font-weight: 300;
