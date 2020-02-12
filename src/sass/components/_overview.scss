@@ -42,7 +42,10 @@
     text-align: center;
     align-self: stretch;
 
-    
+    @include respond(phone) {
+      margin-left: 1rem;
+      padding: .1rem .4rem;
+    }
 
     &-average {
       font-size: var(--big-font-size);
