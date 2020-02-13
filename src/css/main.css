@@ -128,8 +128,12 @@ body {
   cursor: pointer;
   overflow: hidden;
   transition: all .3s; }
+  @media only screen and (max-width: 37.5em) {
+    .btn {
+      font-size: var(--medium-font-size);
+      font-weight: 600; } }
   .btn:hover {
-    box-shadow: var(--shadow-light), 0 0 0 0.2rem var(--color-primary), 0 0 0 0.3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light), 0 0 4rem var(--color-primary-light); }
+    box-shadow: var(--shadow-light), 0 0 0 0.2rem var(--color-primary), 0 0 0 0.3rem var(--color-primary-light), 0 0 2rem var(--color-primary-light), 0 0 3rem var(--color-primary-light); }
   .btn:hover > * {
     animation: swap 3s 1s; }
   .btn:focus {
@@ -142,11 +146,17 @@ body {
     padding: 2rem 7.5rem;
     width: 100%;
     height: 100%; }
+    @media only screen and (max-width: 37.5em) {
+      .btn > * {
+        padding: 1rem 5.5rem; } }
   .btn__invisible--1, .btn__invisible--2 {
     position: absolute;
     left: 0;
     top: -100%;
     padding: 2rem 0; }
+    @media only screen and (max-width: 37.5em) {
+      .btn__invisible--1, .btn__invisible--2 {
+        padding: 1rem 0; } }
   .btn__invisible--2 {
     top: -200%; }
 
