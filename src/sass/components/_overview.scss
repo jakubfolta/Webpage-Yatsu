@@ -5,11 +5,16 @@
   background-color: var(--color-white);
 
   &__heading {
-    font-size: 2.5;
+    font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: .1rem;
     text-transform: capitalize;
     padding: 1rem 2rem;
+
+    @include respond(phone) {
+      font-size: var(--big-font-size);
+      padding: .8rem 1.2rem;
+    }
   }
 
   &__stars { display: flex; }
@@ -37,8 +42,13 @@
     text-align: center;
     align-self: stretch;
 
+    @include respond(phone) {
+      margin-left: 1rem;
+      padding: .1rem .4rem;
+    }
+
     &-average {
-      font-size: 2.25rem;
+      font-size: var(--big-font-size);
       font-weight: 300;
       margin-bottom: -.7rem;
     }

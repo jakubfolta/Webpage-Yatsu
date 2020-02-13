@@ -1,3 +1,18 @@
+/*
+0 - 400px:      Small phone
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800px] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint argument choices:
+- sphone
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 @keyframes pulsate {
   0% {
     transform: scale(1);
@@ -26,12 +41,23 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 43.75%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box;
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
-  background-size: cover;
-  min-height: 100vh; }
+  background-size: cover; }
 
 ::selection {
   background-color: var(--color-primary);
@@ -57,7 +83,7 @@ body {
   --default-font-size: 1.6rem;
   --small-font-size: 1.2rem;
   --medium-font-size: 1.4rem;
-  --big-font-size: 2.2rem;
+  --big-font-size: 2rem;
   --line: .2rem solid var(--color-grey-light-2); }
 
 body {
@@ -75,6 +101,9 @@ body {
   padding-bottom: .2rem;
   cursor: pointer;
   transition: all .3s; }
+  @media only screen and (max-width: 37.5em) {
+    .btn-inline {
+      align-self: center; } }
   .btn-inline .btn-arrow {
     margin-left: 1rem;
     transition: margin .5s; }
@@ -99,10 +128,14 @@ body {
   cursor: pointer;
   overflow: hidden;
   transition: all .3s; }
+  @media only screen and (max-width: 37.5em) {
+    .btn {
+      font-size: var(--medium-font-size);
+      font-weight: 600; } }
   .btn:hover {
-    box-shadow: var(--shadow-light), 0 0 0 0.2rem var(--color-primary), 0 0 0 0.3rem var(--color-primary-light), 0 0 3rem var(--color-primary-light), 0 0 4rem var(--color-primary-light); }
+    box-shadow: var(--shadow-light), 0 0 0 0.2rem var(--color-primary), 0 0 0 0.3rem var(--color-primary-light), 0 0 2rem var(--color-primary-light), 0 0 3rem var(--color-primary-light); }
   .btn:hover > * {
-    animation: swap 3s 1s infinite; }
+    animation: swap 3s 1s; }
   .btn:focus {
     outline: none; }
   .btn:active {
@@ -113,11 +146,17 @@ body {
     padding: 2rem 7.5rem;
     width: 100%;
     height: 100%; }
+    @media only screen and (max-width: 37.5em) {
+      .btn > * {
+        padding: 1.5rem 5.5rem; } }
   .btn__invisible--1, .btn__invisible--2 {
     position: absolute;
     left: 0;
     top: -100%;
     padding: 2rem 0; }
+    @media only screen and (max-width: 37.5em) {
+      .btn__invisible--1, .btn__invisible--2 {
+        padding: 1.5rem 0; } }
   .btn__invisible--2 {
     top: -200%; }
 
@@ -137,8 +176,8 @@ body {
       height: 1rem;
       width: 1rem;
       margin-right: .7rem;
-      background-image: url(../img/chevron-thin-right.svg); }
-      @supports (-webkit-mask-image: url()) {
+      background: url(../img/chevron-thin-right.svg) center/cover; }
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
         .list__item::before {
           background-image: none;
           background-color: var(--color-primary);
@@ -159,11 +198,15 @@ body {
   border-bottom: var(--line);
   background-color: var(--color-white); }
   .overview__heading {
-    font-size: 2.5;
+    font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: .1rem;
     text-transform: capitalize;
     padding: 1rem 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: var(--big-font-size);
+        padding: .8rem 1.2rem; } }
   .overview__stars {
     display: flex; }
   .overview__icon-star, .overview__icon-location {
@@ -183,8 +226,12 @@ body {
     color: var(--color-white);
     text-align: center;
     align-self: stretch; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        margin-left: 1rem;
+        padding: .1rem .4rem; } }
     .overview__rating-average {
-      font-size: 2.25rem;
+      font-size: var(--big-font-size);
       font-weight: 300;
       margin-bottom: -.7rem; }
     .overview__rating-count {
@@ -199,6 +246,17 @@ body {
   padding: 3rem;
   margin-bottom: 3rem;
   overflow: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .review {
+      padding: 2rem;
+      margin-bottom: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .review {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      flex: 0 0 48%;
+      padding: 1rem; } }
   .review::before {
     content: '\201C';
     position: absolute;
@@ -225,7 +283,7 @@ body {
     margin-right: auto;
     margin-left: 2rem; }
   .review__user-name {
-    font-size: var(--default-font-size);
+    font-size: var(--medium-font-size);
     font-weight: 600;
     text-transform: uppercase; }
   .review__user-date {
@@ -244,6 +302,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 25em) {
+    .header {
+      flex-wrap: wrap;
+      align-content: space-around;
+      height: 10rem; } }
 
 .logo {
   height: 3.25rem;
@@ -254,6 +317,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .search {
+      order: 1; } }
+  @media only screen and (max-width: 25em) {
+    .search {
+      flex: 0 0 100%; } }
   .search__input {
     font-size: inherit;
     font-family: inherit;
@@ -270,7 +339,7 @@ body {
       color: var(--color-grey-light-4); }
     .search__input:focus {
       outline: none;
-      width: 100%;
+      width: 95%;
       background-color: var(--color-grey-light-3); }
   .search__input:focus + .search__button {
     background-color: var(--color-grey-light-3); }
@@ -330,10 +399,20 @@ body {
   margin-top: 3rem;
   list-style: none;
   font-size: var(--medium-font-size); }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin-top: 0; } }
   .side-nav__item {
     position: relative; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1; } }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0; } }
     .side-nav__item::before {
       content: '';
       position: absolute;
@@ -358,32 +437,51 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: var(--color-grey-light-1);
-    display: block;
     padding: 1rem 2rem;
     display: flex;
-    align-items: center;
     z-index: 1000; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        padding: 1.5rem;
+        flex-direction: column;
+        align-items: center; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        padding: .5rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: .5rem; } }
 
 .legal {
   font-size: var(--small-font-size);
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .container {
   max-width: 120rem;
   margin: 8rem auto;
   background-color: var(--color-white);
-  box-shadow: var(--box-shadow-big);
-  min-height: 50rem; }
+  box-shadow: var(--box-shadow-big); }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%; } }
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -401,27 +499,54 @@ body {
   padding: 4.5rem;
   border-bottom: var(--border-bottom);
   font-size: var(--medium-font-size); }
+  @media only screen and (max-width: 56.25em) {
+    .detail {
+      padding: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
   .detail .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 0 0 60%;
     background-color: var(--color-white);
     margin-right: 4.5rem;
-    flex: 0 0 60%;
     padding: 3rem;
     box-shadow: var(--shadow-light); }
+    @media only screen and (max-width: 56.25em) {
+      .detail .description {
+        padding: 2rem;
+        margin-right: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .detail .description {
+        margin-right: 0;
+        margin-bottom: 2rem; } }
     .detail .description .paragraph:not(:last-of-type) {
       margin-bottom: 2rem; }
   .detail .user-reviews {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
+    @media only screen and (max-width: 37.5em) {
+      .detail .user-reviews {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-around; } }
 
 .recommend {
   font-size: var(--small-font-size);
   color: var(--color-grey-dark-3);
   display: flex;
-  align-items: center; }
-  .recommend__count {
-    margin-right: auto; }
+  align-items: center;
+  justify-content: space-around; }
+  @media only screen and (max-width: 25em) {
+    .recommend {
+      flex-direction: column; } }
+  .recommend__friends {
+    display: flex; }
   .recommend__photo {
     box-sizing: content-box;
     width: 4rem;
@@ -434,8 +559,19 @@ body {
 .cta {
   padding: 3.5rem 0;
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .cta {
+      padding: 2rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .cta {
+      padding: 1rem 0; } }
   .cta__heading {
     font-size: var(--big-font-size);
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .cta__heading {
+        font-size: var(--default-font-size);
+        font-weight: 600;
+        margin-bottom: 1rem; } }

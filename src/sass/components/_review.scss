@@ -6,6 +6,19 @@
   margin-bottom: 3rem;
   overflow: hidden;
 
+  @include respond(tab-port) {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 0 0 48%;
+    padding: 1rem;
+  }
+
   &::before {
     content: '\201C';
     position: absolute;
@@ -42,7 +55,7 @@
   }
 
   &__user-name {
-    font-size: var(--default-font-size);
+    font-size: var(--medium-font-size);
     font-weight: 600;
     text-transform: uppercase;
   }

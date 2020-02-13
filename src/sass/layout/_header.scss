@@ -6,6 +6,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include respond(sphone) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 10rem;
+  }
 }
 // LOGO
 .logo {
@@ -19,6 +25,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include respond(phone) { order: 1; }
+  @include respond(sphone) { flex: 0 0 100%; }
 
   &__input {
     font-size: inherit;
@@ -39,7 +48,7 @@
 
     &:focus {
       outline: none;
-      width: 100%;
+      width: 95%;
       background-color: var(--color-grey-light-3);
     }
   }
