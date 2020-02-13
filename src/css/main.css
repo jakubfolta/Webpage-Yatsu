@@ -195,8 +195,10 @@ body {
   .gallery__photo {
     width: 100%;
     display: block;
-    transform: scale(1.2);
     transition: all .3s; }
+    @media only screen and (min-width: 56.25em) and (hover: hover), only screen and (hover: hover) {
+      .gallery__photo {
+        transform: scale(1.2); } }
   .gallery__item:hover .gallery__photo {
     transform: scale(1);
     filter: blur(3px) brightness(0.4); }
