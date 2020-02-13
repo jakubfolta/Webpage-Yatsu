@@ -47,9 +47,12 @@
   }
 
   .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 0 0 60%;
     background-color: var(--color-white);
     margin-right: 4.5rem;
-    flex: 0 0 60%;
     padding: 3rem;
     box-shadow: var(--shadow-light);
 
@@ -71,9 +74,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 
     @include respond(phone) {
+      flex-direction: row;
       align-items: stretch;
+      justify-content: space-around;
     }
   }
 }
@@ -83,18 +89,11 @@
   color: var(--color-grey-dark-3);
   display: flex;
   align-items: center;
+  justify-content: space-around;
 
-  @include respond(tab-land) { flex-direction: column; }
-  @include respond(phone) { flex-direction: row; }
   @include respond(sphone) { flex-direction: column; }
 
-  &__count {
-    margin-right: auto;
-
-    @include respond(tab-land) { margin: 0; }
-    @include respond(phone) { margin-right: auto; }
-    @include respond(sphone) { margin: 0; }
-  }
+  &__friends { display: flex; }
 
   &__photo {
     box-sizing: content-box;
@@ -103,9 +102,7 @@
     border-radius: 50%;
     border: .3rem solid var(--color-white);
 
-    &:not(:last-child) {
-      margin-right: -1.5rem;
-    }
+    &:not(:last-child) { margin-right: -1.5rem; }
   }
 }
 
