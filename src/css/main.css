@@ -524,6 +524,9 @@ body {
   @media only screen and (max-width: 37.5em) {
     .recommend {
       flex-direction: row; } }
+  @media only screen and (max-width: 25em) {
+    .recommend {
+      flex-direction: column; } }
   .recommend__count {
     margin-right: auto; }
     @media only screen and (max-width: 75em) {
@@ -532,6 +535,9 @@ body {
     @media only screen and (max-width: 37.5em) {
       .recommend__count {
         margin-right: auto; } }
+    @media only screen and (max-width: 25em) {
+      .recommend__count {
+        margin: 0; } }
   .recommend__photo {
     box-sizing: content-box;
     width: 4rem;
@@ -547,8 +553,16 @@ body {
   @media only screen and (max-width: 56.25em) {
     .cta {
       padding: 2rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .cta {
+      padding: 1rem 0; } }
   .cta__heading {
     font-size: var(--big-font-size);
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .cta__heading {
+        font-size: var(--default-font-size);
+        font-weight: 600;
+        margin-bottom: 1rem; } }
