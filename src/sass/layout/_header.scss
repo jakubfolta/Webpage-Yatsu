@@ -9,6 +9,7 @@
 
   @include respond(sphone) {
     flex-wrap: wrap;
+    align-content: space-around;
     height: 10rem;
   }
 }
