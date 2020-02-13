@@ -2,8 +2,45 @@
 .gallery {
   display: flex;
 
+  &__item {
+    position: relative;
+    overflow: hidden;
+  }
+
   &__photo {
     width: 100%;
     display: block;
+    transform: scale(1.2);
+    transition: all .3s;
+  }
+
+  &__item:hover &__photo {
+    transform: scale(1);
+    filter: blur(3px) brightness(.4);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--huge-font-size);
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--color-white);
+    text-shadow: 0 .1rem 2rem var(--color-primary-light), 0 .1rem 4rem var(--color-primary-light);
+    white-space: nowrap;
+    opacity: 0;
+    transition: .3s;
+
+    &--1 { left: -100%; }
+    &--2 { top: 150%; }
+    &--3 { left: 150%; }
+  }
+
+  &__item:hover &__caption {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
   }
 }
