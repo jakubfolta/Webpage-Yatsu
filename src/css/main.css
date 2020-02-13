@@ -177,7 +177,7 @@ body {
       width: 1rem;
       margin-right: .7rem;
       background: url(../img/chevron-thin-right.svg) center/cover; }
-      @supports (-webkit-mask-image: url()) {
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
         .list__item::before {
           background-image: none;
           background-color: var(--color-primary);

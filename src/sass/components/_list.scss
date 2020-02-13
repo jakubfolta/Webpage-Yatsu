@@ -18,7 +18,7 @@
       margin-right: .7rem;
       background: url(../img/chevron-thin-right.svg) center/cover;
 
-      @supports(-webkit-mask-image: url() or mask-image: url()) {
+      @supports(-webkit-mask-image: url()) or (mask-image: url()) {
         background-image: none;
         background-color: var(--color-primary);
         -webkit-mask-image: url(../img/chevron-thin-right.svg);
