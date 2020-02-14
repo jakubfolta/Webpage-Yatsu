@@ -11,6 +11,7 @@
 
   &__item {
     position: relative;
+    z-index: 100;
 
     @include respond(tab-port) { flex: 1; }
 
