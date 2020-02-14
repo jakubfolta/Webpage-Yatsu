@@ -425,17 +425,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+  .user-nav__user:hover + .user-nav__list-box,
+  .user-nav__user:focus + .user-nav__list-box, .user-nav__list-box:hover {
+    visibility: visible;
+    opacity: 1; }
   .user-nav__list-box {
-    background-color: var(--color-grey-light-2);
     position: absolute;
     top: 100%;
     right: 0;
+    background-color: var(--color-grey-light-2);
     height: auto;
-    z-index: 200; }
+    z-index: 200;
+    padding: 0;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s; }
   .user-nav__list {
     list-style: none; }
   .user-nav__item {
-    padding: .5rem 1rem; }
+    padding: .5rem 1rem;
+    transition: all .3s; }
+    .user-nav__item:hover {
+      background-color: var(--color-grey-light-4); }
+    .user-nav__item:active {
+      background-color: var(--color-grey-light-1); }
   .user-nav__link:link, .user-nav__link:visited {
     text-decoration: none;
     color: inherit; }

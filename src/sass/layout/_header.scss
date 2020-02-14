@@ -118,24 +118,35 @@
     align-items: center;
   }
 
+  &__user:hover + &__list-box,
+  &__user:focus + &__list-box,
+  &__list-box:hover {
+    visibility: visible;
+    opacity: 1;
+  }
+
   &__list-box {
-    background-color: var(--color-grey-light-2);
     position: absolute;
     top: 100%;
     right: 0;
+    background-color: var(--color-grey-light-2);
     height: auto;
     z-index: 200;
+    padding: 0;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
   }
 
-  // &:hover { background-color: var(--color-grey-light-2); }
-  // &:active { background-color: var(--color-grey-light-1); }
-
-  &__list {
-    list-style: none;
-  }
+  &__list { list-style: none; }
 
   &__item {
     padding: .5rem 1rem;
+    transition: all .3s;
+
+    &:hover { background-color: var(--color-grey-light-4); }
+    &:active { background-color: var(--color-grey-light-1); }
   }
 
   &__link:link,
