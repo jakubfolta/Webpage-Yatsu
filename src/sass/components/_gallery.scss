@@ -37,6 +37,13 @@
     opacity: 0;
     transition: .3s;
 
+    @include respond(phone) {
+      font-size: var(--big-font-size-2);
+      text-shadow: 0 .1rem 1.5rem var(--color-primary-light), 0 .1rem 2rem var(--color-primary-light);
+    }
+
+    @include respond(sphone) { font-size: var(--big-font-size); }
+
     &--1 { left: -100%; }
     &--2 { top: 150%; }
     &--3 { left: 150%; }
