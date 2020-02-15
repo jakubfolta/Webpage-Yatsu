@@ -450,6 +450,9 @@ body {
       background-color: var(--color-grey-light-4); }
     .user-nav__item:active {
       background-color: var(--color-grey-light-1); }
+    @media only screen and (hover: none) {
+      .user-nav__item {
+        padding: 1rem 1.5rem; } }
   .user-nav__link:link, .user-nav__link:visited {
     text-decoration: none;
     color: inherit; }
