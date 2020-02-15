@@ -7,6 +7,12 @@
   flex-wrap: wrap;
   list-style: none;
 
+  @include respond(sphone) {
+    flex-direction: column;
+    margin: 1rem auto;
+    padding: 1rem 0;
+  }
+
   &__item {
     flex: 0 0 50%;
 

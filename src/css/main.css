@@ -171,6 +171,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   list-style: none; }
+  @media only screen and (max-width: 25em) {
+    .list {
+      flex-direction: column;
+      margin: 1rem auto;
+      padding: 1rem 0; } }
   .list__item {
     flex: 0 0 50%; }
     .list__item::before {
