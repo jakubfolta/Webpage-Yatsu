@@ -19,6 +19,8 @@
     padding: 1rem;
   }
 
+  @include respond(sphone) { flex: 100%; }
+
   &::before {
     content: '\201C';
     position: absolute;
