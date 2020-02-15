@@ -142,21 +142,22 @@
   &__list { list-style: none; }
 
   &__item {
-    padding: .5rem 1rem;
-    transition: all .3s;
+    transition: background-color .3s;
 
     &:hover { background-color: var(--color-grey-light-4); }
     &:active { background-color: var(--color-grey-light-1); }
-
-    @media only screen and (hover: none) {
-      padding: 1rem 1.5rem;
-    }
   }
 
   &__link:link,
   &__link:visited {
+    display: inline-block;
+    padding: .5rem 1rem;
     text-decoration: none;
     color: inherit;
+
+    @media only screen and (hover: none) {
+      padding: 1rem 1.5rem;
+    }
   }
 
   &__user-photo {

@@ -444,18 +444,19 @@ body {
   .user-nav__list {
     list-style: none; }
   .user-nav__item {
-    padding: .5rem 1rem;
-    transition: all .3s; }
+    transition: background-color .3s; }
     .user-nav__item:hover {
       background-color: var(--color-grey-light-4); }
     .user-nav__item:active {
       background-color: var(--color-grey-light-1); }
-    @media only screen and (hover: none) {
-      .user-nav__item {
-        padding: 1rem 1.5rem; } }
   .user-nav__link:link, .user-nav__link:visited {
+    display: inline-block;
+    padding: .5rem 1rem;
     text-decoration: none;
     color: inherit; }
+    @media only screen and (hover: none) {
+      .user-nav__link:link, .user-nav__link:visited {
+        padding: 1rem 1.5rem; } }
   .user-nav__user-photo {
     height: 3.75rem;
     border-radius: 50%;
