@@ -76,6 +76,7 @@ body {
   --color-grey-dark-3: hsl(0, 0%, 60%);
   --color-white: hsl(0, 0%, 100%);
   --color-black: hsl(0, 3%, 5%);
+  --color-black-transparent: rgba(0,0,0, .3);
   --box-shadow-big: 1rem 2rem 4rem var(--color-black);
   --box-shadow-small: 0 1rem 3rem var(--color-black);
   --shadow-very-light: 0 .6rem 2rem rgba(0,0,0, .4);
@@ -286,6 +287,22 @@ body {
       font-size: .8rem;
       font-weight: 600;
       text-transform: uppercase; }
+
+.popup {
+  background-color: green;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; }
+  @supports (-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem)) {
+    .popup {
+      -webkit-backdrop-filter: blur(1rem);
+      backdrop-filter: blur(1rem);
+      background-color: var(--color-black-transparent); } }
+  .popup__container {
+    color: white; }
 
 .review {
   position: relative;
@@ -574,6 +591,7 @@ body {
       display: none; } }
 
 .container {
+  position: relative;
   max-width: 120rem;
   margin: 8rem auto;
   background-color: var(--color-white);
