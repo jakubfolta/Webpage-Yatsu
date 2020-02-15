@@ -120,6 +120,8 @@
 
   &__user:hover + &__list-box,
   &__user:focus + &__list-box,
+  &__icon-box:hover + &__list-box,
+  &__icon-box:focus + &__list-box,
   &__list-box:hover {
     visibility: visible;
     opacity: 1;
@@ -128,7 +130,6 @@
   &__list-box {
     position: absolute;
     top: 100%;
-    right: 0;
     background-color: var(--color-grey-light-2);
     height: auto;
     z-index: 200;
@@ -137,9 +138,36 @@
     visibility: hidden;
     opacity: 0;
     transition: all .3s;
+    white-space: nowrap;
+
+    &--1 {
+      right: 75%;
+
+      @include respond(phone) {
+        right: auto;
+        left: 0%;
+      }
+    }
+
+    &--2 {
+      right: 50%;
+
+      @include respond(phone) {
+        right: auto;
+        left: 25%;
+      }
+    }
+
+    &--3 {
+      right: 0%;
+    }
   }
 
-  &__list { list-style: none; }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
 
   &__item {
     transition: background-color .3s;
@@ -150,10 +178,12 @@
 
   &__link:link,
   &__link:visited {
-    display: inline-block;
+    display: flex;
     padding: .5rem 1rem;
     text-decoration: none;
     color: inherit;
+
+    @include respond(sphone) { font-size: var(--small-font-size); }
 
     @media only screen and (hover: none) {
       padding: 1rem 1.5rem;
