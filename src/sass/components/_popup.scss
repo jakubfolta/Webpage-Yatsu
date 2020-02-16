@@ -20,7 +20,13 @@
   }
 
   &__container {
-    
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35%;
+    color: inherit;
+    background-color: var(--color-grey-light-1);
   }
 
   &__sidebar {
