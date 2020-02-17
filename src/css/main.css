@@ -296,7 +296,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: green;
   height: 100vh;
   width: 100%;
   z-index: 1000; }
@@ -309,20 +308,53 @@ body {
     flex: 0 0 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 35%;
     color: inherit;
     background-color: var(--color-grey-light-1); }
   .popup__sidebar {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     flex-direction: column;
     flex: 0 0 30%;
-    height: 100%;
     padding: 0 2rem;
     background: var(--color-grey-light-4); }
+  .popup__paragraph {
+    font-size: var(--big-font-size); }
+  .popup__span {
+    display: block;
+    font-size: var(--big-font-size-2);
+    text-transform: uppercase;
+    text-shadow: var(--shadow-light); }
+  .popup__user-image {
+    border-radius: 50%;
+    width: 100%; }
   .popup__main {
-    flex: 1; }
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .popup__top {
+    display: flex;
+    justify-content: flex-start; }
+  .popup__heading {
+    padding: 1rem 2rem;
+    border-bottom: var(--line); }
+  .popup__icon-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    fill: var(--color-grey-dark-2);
+    transition: transform .3s; }
+    .popup__icon-close:hover {
+      transform: translateY(-0.2rem); }
+    .popup__icon-close:active {
+      transform: translateY(0); }
+  .popup__message {
+    padding: 1rem; }
 
 .review {
   position: relative;
