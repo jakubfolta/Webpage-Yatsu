@@ -81,6 +81,59 @@
   &__invisible--2 { top: -200%; }
 }
 
+// Glowing checkbox button
+.popup__glowing-button {
+  position: relative;
+  width: 6rem;
+  height: 2rem;
+  -webkit-appearance: none;
+  background: linear-gradient(0deg, hsl(0, 0%, 20%), hsl(0, 0%, 40%));
+  cursor: pointer;
+  outline: none;
+  border-radius: 30px;
+  box-shadow: 0 0 0 4px hsl(0, 0%, 30%), 0 0 0 5px hsl(0, 0%, 15%);
+}
+
+.popup__glowing-button:checked {
+  background: linear-gradient(0deg, hsl(122, 100%, 43%), hsl(122, 100%, 53%));
+  box-shadow: 0 0 2px hsl(122, 100%, 43%), 0 0 5px hsl(122, 100%, 63%), 0 0 0 4px hsl(0, 0%, 30%), 0 0 0 5px hsl(0, 0%, 20%), inset 0 0 10px hsl(122, 100%, 43%);
+}
+
+.popup__glowing-button::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 2rem;
+  border-radius: 30px;
+  background: linear-gradient(0deg, hsl(0, 0%, 17%), hsl(0, 0%, 27%));
+  box-shadow: 0 0 0 1px hsl(0, 0%, 15%);
+  transform: scale(.98, .97);
+  transition: .4s;
+}
+
+.popup__glowing-button:checked::before { left: 3rem; }
+
+.popup__glowing-button::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - .2rem);
+  left: 1.5rem;
+  width: .6rem;
+  height: .4rem;
+  background: linear-gradient(0deg, hsl(0, 0%, 17%), hsl(0, 0%, 27%));
+  border-radius: 30px;
+  box-shadow: 0 0 0 .5px hsl(0, 0%, 15%);
+  transition: .4s;
+}
+
+.popup__glowing-button:checked::after {
+  left: 4.5rem;
+  background: hsl(122, 100%, 53%);
+  box-shadow: 0 0 25px hsl(122, 100%, 73%);
+}
+
 
 
 
