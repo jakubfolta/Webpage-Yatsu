@@ -3,8 +3,8 @@ const pageController = (function() {
   const locationButton = document.getElementById('location');
   const place = locationButton.value;
   const url = 'https://www.google.com/maps/place/';
-  const popup = document.querySelector('.popup');
-  const popupIconClose = document.querySelector('.popup__icon-close');
+  const popups = document.querySelectorAll('.popup');
+  const popupIconsClose = document.querySelectorAll('.popup__icon-close');
   const page = window.location;
 
   const closePopup = e => {
@@ -21,8 +21,10 @@ const pageController = (function() {
     });
 
     // Close popup
-    popupIconClose.addEventListener('click', () => {
-      page.href = `#`;
+    Array.from(popupIconsClose).forEach(icon => {
+      icon.addEventListener('click', () => {
+        page.href = `#`;
+      })
     });
 
     document.addEventListener('keyup', e => {
@@ -37,7 +39,9 @@ const pageController = (function() {
       }
     });
 
-    popup.addEventListener('click', closePopup);
+    Array.from(popups).forEach(popup => {
+      popup.addEventListener('click', closePopup);
+    });
   };
 
   return {
