@@ -359,7 +359,7 @@ body {
     height: 2.5rem;
     cursor: pointer;
     fill: var(--color-grey-dark-2);
-    transition: transform .3s; }
+    transition: transform .2s; }
     .popup__icon-close:hover {
       transform: translateY(-0.2rem); }
     .popup__icon-close:active {

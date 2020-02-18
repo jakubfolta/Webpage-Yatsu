@@ -86,7 +86,7 @@
     height: 2.5rem;
     cursor: pointer;
     fill: var(--color-grey-dark-2);
-    transition: transform .3s;
+    transition: transform .2s;
 
     &:hover { transform: translateY(-.2rem); }
     &:active { transform: translateY(0); }
