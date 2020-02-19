@@ -400,6 +400,12 @@ body {
     font-weight: 600;
     letter-spacing: .2rem;
     text-transform: capitalize; }
+  .popup__span {
+    display: block;
+    font-size: var(--big-font-size-2);
+    text-shadow: var(--shadow-light); }
+    .popup__span--bookmark {
+      display: inline; }
   .popup__user-image {
     border-radius: 50%;
     width: 100%; }
