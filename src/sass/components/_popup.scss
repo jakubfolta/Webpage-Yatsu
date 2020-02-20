@@ -137,7 +137,6 @@
     font-size: var(--vbig-font-size);
     letter-spacing: .4rem;
     font-weight: 600;
-    text-shadow: var(--shadow-very-light);
   }
 
   &__item {
@@ -147,7 +146,7 @@
     align-items: center;
     flex: 1;
     cursor: pointer;
-    transition: all .5s;
+    transition: all .3s;
 
     &:first-child { background-color: var(--color-grey-light-4); }
 
@@ -185,14 +184,14 @@
   }
 
   &__radio-button {
+    position: absolute;
+    top: -.8rem;
+    left: -3rem;
     display: inline-block;
     width: 3rem;
     height: 3rem;
     border: 5px solid var(--color-primary);
     border-radius: 50%;
-    position: absolute;
-    top: -.8rem;
-    left: .5rem;
 
     &::after {
       content: '';
