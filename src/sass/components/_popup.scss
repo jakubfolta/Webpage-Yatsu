@@ -184,6 +184,7 @@
   &__radio-label {
     position: relative;
     padding: 0 1rem;
+    cursor: pointer;
   }
 
   &__radio-button {
@@ -214,4 +215,6 @@
   }
 
   &__radio-input:checked ~ &__radio-label &__radio-button::after { opacity: 1; }
+
+  &__glowing-button-box { padding: 1rem 1rem 0; }
 }
