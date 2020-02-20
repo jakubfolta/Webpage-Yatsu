@@ -474,11 +474,16 @@ body {
     letter-spacing: .2rem; }
   .popup__radio-form {
     display: flex;
-    padding: 1rem; }
+    padding: 1rem 0; }
+  .popup__radio-group {
+    margin-left: 3.5rem; }
+    .popup__radio-group:not(:last-child) {
+      margin-right: 1rem; }
   .popup__radio-input {
     display: none; }
   .popup__radio-label {
-    position: relative; }
+    position: relative;
+    padding: 0 1rem; }
   .popup__radio-button {
     position: absolute;
     top: -.8rem;
@@ -489,6 +494,10 @@ body {
     border: 5px solid var(--color-primary);
     border-radius: 50%; }
     .popup__radio-button::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       content: '';
       display: block;
       height: 1.4rem;
