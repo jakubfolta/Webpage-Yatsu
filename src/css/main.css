@@ -40,7 +40,7 @@ $breakpoint argument choices:
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 92.5%; }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -57,7 +57,8 @@ html {
 body {
   box-sizing: border-box;
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
-  background-size: cover; }
+  background-size: cover;
+  font-size: 42.5%; }
 
 ::selection {
   background-color: var(--color-primary);
@@ -191,7 +192,7 @@ body {
   border-radius: 30px;
   background: linear-gradient(0deg, #2b2b2b, #454545);
   transform: scale(0.96, 0.96);
-  transition: .4s; }
+  transition: .2s; }
 
 .glowing-button:checked::before {
   left: 3rem; }
@@ -206,12 +207,53 @@ body {
   background: linear-gradient(0deg, #2b2b2b, #454545);
   border-radius: 3rem;
   box-shadow: 0 0 0 0.3px #262626;
-  transition: .4s; }
+  transition: .2s; }
 
 .glowing-button:checked::after {
   left: 5.2rem;
   background: #0fff17;
   box-shadow: 0 0 0.3rem #75ff7a; }
+
+.custom-list {
+  width: 30rem; }
+  .custom-list__item {
+    position: relative;
+    padding: .5rem 0;
+    list-style: none;
+    border-bottom: var(--line); }
+    .custom-list__item:last-child {
+      border-bottom: none; }
+  .custom-list__label {
+    cursor: pointer;
+    text-transform: capitalize;
+    color: var(--color-grey-dark-2);
+    padding-left: 3.5rem; }
+  .custom-list__input {
+    opacity: 0;
+    cursor: pointer; }
+  .custom-list__span {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px; }
+    .custom-list__span::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      right: 3px;
+      bottom: 3px;
+      border-radius: 2px;
+      background: #1a1a1a;
+      transform: translateX(180px);
+      transition: .3s; }
+  .custom-list__input:checked ~ .custom-list__span::before {
+    background: #4bed26;
+    box-shadow: 0 0 15px #4bed26;
+    transform: translateX(0); }
 
 .list {
   margin: 3rem 0;
@@ -455,12 +497,12 @@ body {
     justify-content: center;
     align-items: center;
     flex: 1;
-    cursor: pointer;
-    transition: all .3s; }
+    cursor: pointer; }
     .popup__item:first-child {
       background-color: var(--color-grey-light-4); }
     .popup__item:hover {
-      background-color: var(--color-grey-light-4); }
+      background-color: var(--color-grey-light-4);
+      transition: all .3s; }
     .popup__item:active {
       background-color: var(--color-grey-light-2); }
   .popup__settings {

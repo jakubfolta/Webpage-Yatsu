@@ -146,11 +146,14 @@
     align-items: center;
     flex: 1;
     cursor: pointer;
-    transition: all .3s;
 
     &:first-child { background-color: var(--color-grey-light-4); }
 
-    &:hover { background-color: var(--color-grey-light-4); }
+    &:hover {
+      background-color: var(--color-grey-light-4);
+      transition: all .3s;
+    }
+
     &:active { background-color: var(--color-grey-light-2); }
   }
 

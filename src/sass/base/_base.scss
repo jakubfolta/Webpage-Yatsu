@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 62.5%; // 1rem = 10px
+  font-size: 92.5%; // 1rem = 10px
 
   @include respond(tab-land) {
     font-size: 56.25%; // 1rem = 9px; 9/16 = 56.25%
@@ -29,6 +29,7 @@ body {
   box-sizing: border-box;
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
   background-size: cover;
+  font-size: 42.5%; // 1rem = 10px
 }
 
 ::selection {

@@ -109,7 +109,7 @@
   border-radius: 30px;
   background: linear-gradient(0deg, hsl(0, 0%, 17%), hsl(0, 0%, 27%));
   transform: scale(.96,.96);
-  transition: .4s;
+  transition: .2s;
 }
 
 .glowing-button:checked::before { left: 3rem; }
@@ -124,7 +124,7 @@
   background: linear-gradient(0deg, hsl(0, 0%, 17%), hsl(0, 0%, 27%));
   border-radius: 3rem;
   box-shadow: 0 0 0 .3px hsl(0, 0%, 15%);
-  transition: .4s;
+  transition: .2s;
 }
 
 .glowing-button:checked::after {
