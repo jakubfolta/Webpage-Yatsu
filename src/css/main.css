@@ -190,7 +190,7 @@ body {
   height: 2rem;
   border-radius: 30px;
   background: linear-gradient(0deg, #2b2b2b, #454545);
-  transform: scale(0.8, 0.8);
+  transform: scale(0.96, 0.96);
   transition: .4s; }
 
 .glowing-button:checked::before {
@@ -200,16 +200,16 @@ body {
   content: '';
   position: absolute;
   top: calc(50% - .2rem);
-  left: 1.5rem;
-  width: .6rem;
-  height: .4rem;
+  left: 2.2rem;
+  width: .3rem;
+  height: .3rem;
   background: linear-gradient(0deg, #2b2b2b, #454545);
-  border-radius: 30px;
-  box-shadow: 0 0 0 0.5px #262626;
+  border-radius: 3rem;
+  box-shadow: 0 0 0 0.3px #262626;
   transition: .4s; }
 
 .glowing-button:checked::after {
-  left: 4.5rem;
+  left: 5.2rem;
   background: #0fff17;
   box-shadow: 0 0 0.3rem #75ff7a; }
 
