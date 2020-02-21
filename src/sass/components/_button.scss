@@ -90,13 +90,13 @@
   background: linear-gradient(0deg, hsl(0, 0%, 20%), hsl(0, 0%, 40%));
   cursor: pointer;
   outline: none;
-  border-radius: 50px;
-  box-shadow: 0 0 0 4px hsl(0, 0%, 30%), 0 0 0 5px hsl(0, 0%, 15%), inset 0 0 0 .5px hsl(0, 0%, 30%) ;
+  border-radius: 3rem;
+  box-shadow: 0 0 0 3px hsl(0, 0%, 30%), 0 0 0 4px hsl(0, 0%, 15%), inset 0 0 0 .5px hsl(0, 0%, 30%);
 }
 
 .glowing-button:checked {
   background: linear-gradient(0deg, var(--color-primary), var(--color-primary-light));
-  box-shadow: 0 0 2px var(--color-primary), 0 0 3px hsl(122, 100%, 63%), 0 0 0 5px hsl(0, 0%, 20%), inset 0 0 5px var(--color-primary);
+  box-shadow: 0 0 0 3px hsl(0, 0%, 30%), 0 0 0 4px hsl(0, 0%, 15%), inset 0 0 0 .5px hsl(0, 0%, 30%), 0 0 2px var(--color-primary), 0 0 3px hsl(122, 100%, 63%);
 }
 
 .glowing-button::before {
@@ -106,9 +106,9 @@
   left: 0;
   width: 3rem;
   height: 2rem;
-  border-radius: 30px;
+  border-radius: 3rem;
   background: linear-gradient(0deg, hsl(0, 0%, 17%), hsl(0, 0%, 27%));
-  transform: scale(.96,.96);
+  transform: scale(.95,.94);
   transition: .2s;
 }
 
@@ -123,14 +123,14 @@
   height: .3rem;
   background: linear-gradient(0deg, hsl(0, 0%, 17%), hsl(0, 0%, 27%));
   border-radius: 3rem;
-  box-shadow: 0 0 0 .3px hsl(0, 0%, 15%);
+  box-shadow: 0 0 0 .05rem hsl(0, 0%, 20%);
   transition: .2s;
 }
 
 .glowing-button:checked::after {
   left: 5.2rem;
   background: var(--color-primary-light);
-  box-shadow: 0 0 .3rem hsl(122, 100%, 73%);
+  box-shadow: 0 0 .3rem var(--color-primary-vlight);
 }
 
 
