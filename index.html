@@ -297,7 +297,7 @@
                 <h2 class="popup__heading">Flight to Tokyo</h2>
               </div>
               <p class="popup__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
           </div>
@@ -305,19 +305,20 @@
 
         <div class="popup" id="popup-message">
           <div class="popup__container popup__container--2">
-
             <div class="popup__sidebar">
               <p class="popup__paragraph">
                 Message from:
-                <span class="popup__span">
-                  Raizo
-                </span>
+                <div class="popup__user">
+                  <picture class="popup__picture">
+                    <source srcset="src/img/user-1-small.jpg 1x, src/img/user-1.jpg 2x"
+                    media="(max-width: 37.5em)">
+                    <img src="src/img/user-1.jpg" alt="User image" class="popup__user-image">
+                  </picture>
+                  <span class="popup__span">
+                    Raizo
+                  </span>
+                </div>
               </p>
-              <picture class="popup__picture">
-                <source srcset="src/img/user-1-small.jpg 1x, src/img/user-1.jpg 2x"
-                media="(max-width: 37.5em)">
-                <img src="src/img/user-1.jpg" alt="User image" class="popup__user-image">
-              </picture>
             </div>
 
             <div class="popup__main">
@@ -328,7 +329,7 @@
                 </svg>
               </div>
               <p class="popup__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
           </div>
@@ -390,7 +391,7 @@
                           <input class="custom-list__input" type="checkbox"/>
                           <span class="custom-list__span"></span>
                         </label>
-                      </li class="custom-list__item">
+                      </li>
                       <li class="custom-list__item">
                         <label class="custom-list__label">List Item 4
                           <input class="custom-list__input" type="checkbox"/>
