@@ -436,8 +436,7 @@ body {
     justify-content: space-around;
     flex-direction: column;
     flex: 0 0 30%;
-    padding: 0 2rem;
-    background: var(--color-primary-light); }
+    padding: 0 2rem; }
     .popup__sidebar--user-menu {
       flex: 0 0 20%;
       align-items: stretch;
@@ -503,7 +502,8 @@ body {
     justify-content: center;
     align-items: center;
     flex: 1;
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: var(--color-primary-light); }
     .popup__item:first-child {
       background-color: var(--color-grey-light-4); }
     .popup__item:hover {
