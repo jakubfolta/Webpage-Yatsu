@@ -430,7 +430,7 @@ body {
       transform: scale(0.3);
       transition: transform 0.7s cubic-bezier(0.39, 1.33, 0.57, 1.25); }
     .popup__container--3 {
-      flex: 0 0 90%;
+      flex: 0 0 70%;
       transform: translateY(-300%);
       transition: transform 1s cubic-bezier(0.98, 1.24, 0.6, 1.12); }
   .popup__sidebar {
