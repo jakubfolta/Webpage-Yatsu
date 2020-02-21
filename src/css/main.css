@@ -67,6 +67,7 @@ body {
   --color-primary: hsl(113, 99%, 42%);
   --color-primary-dark: hsl(113, 99%, 22%);
   --color-primary-light: hsl(113, 99%, 48%);
+  --color-primary-vlight: hsl(113, 99%, 68%);
   --color-grey-light-1: hsl(0, 9%, 97%);
   --color-grey-light-2: hsl(0, 12%, 95%);
   --color-grey-light-3: hsl(0, 9%, 93%);
@@ -178,8 +179,8 @@ body {
   box-shadow: 0 0 0 4px #4d4d4d, 0 0 0 5px #262626, inset 0 0 0 0.5px #4d4d4d; }
 
 .glowing-button:checked {
-  background: linear-gradient(0deg, #00db07, #0fff17);
-  box-shadow: 0 0 2px #00db07, 0 0 3px #42ff49, 0 0 0 5px #333333, inset 0 0 5px #00db07; }
+  background: linear-gradient(0deg, var(--color-primary), var(--color-primary-light));
+  box-shadow: 0 0 2px var(--color-primary), 0 0 3px #42ff49, 0 0 0 5px #333333, inset 0 0 5px var(--color-primary); }
 
 .glowing-button::before {
   position: absolute;
@@ -210,7 +211,7 @@ body {
 
 .glowing-button:checked::after {
   left: 5.2rem;
-  background: #0fff17;
+  background: var(--color-primary-light);
   box-shadow: 0 0 0.3rem #75ff7a; }
 
 .custom-list {
@@ -249,10 +250,10 @@ body {
       background: #1a1a1a;
       transform: translateX(180px);
       opacity: 0;
-      transition: .3s; }
+      transition: all .3s; }
   .custom-list__input:checked ~ .custom-list__span::before {
-    background: #4bed26;
-    box-shadow: 0 0 15px #4bed26;
+    background: var(--color-primary);
+    box-shadow: 0 0 0.2rem var(--color-primary-light), 0 0 0.9rem var(--color-primary-vlight);
     transform: translateX(0);
     opacity: 1; }
 

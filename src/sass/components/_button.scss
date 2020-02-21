@@ -95,8 +95,8 @@
 }
 
 .glowing-button:checked {
-  background: linear-gradient(0deg, hsl(122, 100%, 43%), hsl(122, 100%, 53%));
-  box-shadow: 0 0 2px hsl(122, 100%, 43%), 0 0 3px hsl(122, 100%, 63%), 0 0 0 5px hsl(0, 0%, 20%), inset 0 0 5px hsl(122, 100%, 43%);
+  background: linear-gradient(0deg, var(--color-primary), var(--color-primary-light));
+  box-shadow: 0 0 2px var(--color-primary), 0 0 3px hsl(122, 100%, 63%), 0 0 0 5px hsl(0, 0%, 20%), inset 0 0 5px var(--color-primary);
 }
 
 .glowing-button::before {
@@ -129,7 +129,7 @@
 
 .glowing-button:checked::after {
   left: 5.2rem;
-  background: hsl(122, 100%, 53%);
+  background: var(--color-primary-light);
   box-shadow: 0 0 .3rem hsl(122, 100%, 73%);
 }
 

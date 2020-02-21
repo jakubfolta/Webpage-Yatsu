@@ -44,13 +44,13 @@
       background: hsl(0, 0%, 10%);
       transform: translateX(180px);
       opacity: 0;
-      transition: .3s;
+      transition: all .3s;
     }
   }
 
   &__input:checked ~ &__span::before {
-    background: hsl(109, 85%, 54%);
-    box-shadow: 0 0 15px hsl(109, 85%, 54%);
+    background: var(--color-primary);
+    box-shadow: 0 0 .2rem var(--color-primary-light), 0 0 .9rem var(--color-primary-vlight);
     transform: translateX(0);
     opacity: 1;
   }
