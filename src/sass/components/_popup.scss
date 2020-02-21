@@ -10,13 +10,8 @@
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
+  background-color: var(--color-black-transparent);
   transition: all .3s;
-
-  @supports (-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem)) {
-    -webkit-backdrop-filter: blur(1rem);
-    backdrop-filter: blur(1rem);
-    background-color: var(--color-black-transparent);
-  }
 
   &:target {
     opacity: 1;

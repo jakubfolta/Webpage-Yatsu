@@ -63,7 +63,10 @@
       align-items: center;
     }
 
-    @include respond(phone) { padding: .5rem; }
+    @include respond(phone) {
+      padding: .5rem;
+      white-space: nowrap;
+    }
   }
 
   &__icon {
