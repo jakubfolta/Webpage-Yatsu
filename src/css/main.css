@@ -242,10 +242,10 @@ body {
     .custom-list__span::before {
       content: '';
       position: absolute;
-      top: .5rem;
-      left: .5rem;
-      right: .5rem;
-      bottom: .5rem;
+      top: .6rem;
+      left: .6rem;
+      right: .6rem;
+      bottom: .6rem;
       border-radius: 3rem;
       background: #1a1a1a;
       transform: translateX(180px);
