@@ -862,10 +862,6 @@ body {
   position: relative;
   background-color: var(--color-white);
   box-shadow: var(--box-shadow-big); }
-  @media only screen and (max-width: 75em) {
-    .container {
-      margin: 0;
-      max-width: 100%; } }
 
 .content {
   display: flex; }
