@@ -50,15 +50,19 @@
       transform: scale(.3);
       transition: transform .7s cubic-bezier(.39,1.33,.57,1.25);
 
-      @include respond(phone) {
-        flex-direction: column;
-      }
+      @include respond(phone) { flex-direction: column; }
     }
 
     &--3 {
       flex: 0 0 70%;
       transform: translateY(-300%);
       transition: transform 1s cubic-bezier(.98,1.24,.6,1.12);
+
+      @include respond(phone) { flex-direction: column; }
+      @include respond(sphone) {
+        flex: 1;
+        height: 100vh;
+      }
     }
   }
 
@@ -148,9 +152,11 @@
 
     &--message { margin-right: 4rem; }
 
-    &--user-menu { justify-content: center;}
+    &--user-menu {
+      justify-content: center;
 
-    @include respond(phone) { font-size: var(--default-font-size); }
+      @include respond(sphone) { font-size: var(--medium-font-size); }
+    }
   }
 
   &__icon-close {
@@ -193,11 +199,17 @@
     font-size: var(--vbig-font-size);
     letter-spacing: .4rem;
     font-weight: 600;
+
+    @include respond(phone) {
+      flex-flow: row wrap;
+      font-size: var(--big-font-size);
+    }
+
+    @include respond(sphone) { font-size: var(--default-font-size); }
   }
 
   &__item {
     padding: 1rem 2rem;
-    // white-space: nowrap;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,6 +225,9 @@
     }
 
     &:active { background-color: var(--color-grey-light-2); }
+
+    @include respond(phone) { flex: 0 0 50%; }
+    @include respond(sphone) { flex: 0 0 100%; }
   }
 
   &__settings {
@@ -225,6 +240,9 @@
   &__heading-tertiary {
     font-size: var(--big-font-size);
     letter-spacing: .2rem;
+
+    @include respond(phone) { font-size: var(--default-font-size); }
+    @include respond(sphone) { font-size: var(--medium-font-size); }
   }
 
   &__radio-form {
