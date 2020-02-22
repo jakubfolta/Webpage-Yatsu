@@ -46,9 +46,13 @@
     }
 
     &--2 {
-      flex: 0 0 70%;
+      flex: 0 0 40%;
       transform: scale(.3);
       transition: transform .7s cubic-bezier(.39,1.33,.57,1.25);
+
+      @include respond(phone) {
+        flex-direction: column;
+      }
     }
 
     &--3 {
@@ -142,9 +146,11 @@
     letter-spacing: .3rem;
     white-space: nowrap;
 
-    &--message { flex: 0 0 80%; }
+    &--message { margin-right: 4rem; }
 
     &--user-menu { justify-content: center;}
+
+    @include respond(phone) { font-size: var(--default-font-size); }
   }
 
   &__icon-close {
@@ -172,7 +178,11 @@
     }
   }
 
-  &__text { padding: 1rem; }
+  &__text {
+    padding: 1rem;
+
+    @include respond(phone) { font-size: var(--medium-font-size); }
+  }
 
   &__list {
     list-style: none;
@@ -187,6 +197,7 @@
 
   &__item {
     padding: 1rem 2rem;
+    // white-space: nowrap;
     display: flex;
     justify-content: center;
     align-items: center;
