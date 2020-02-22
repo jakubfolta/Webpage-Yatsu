@@ -80,6 +80,11 @@
     letter-spacing: .2rem;
     text-transform: capitalize;
     white-space: nowrap;
+
+
+    @include respond(phone) {
+      font-size: var(--big-font-size-1);
+    }
   }
 
   &__user {
@@ -96,6 +101,10 @@
     color: var(--color-primary);
     text-shadow: var(--shadow-light);
 
+    @include respond(phone) {
+      font-size: var(--big-font-size-1);
+      display: none;
+    }
      &--bookmark { display: inline;}
   }
 
