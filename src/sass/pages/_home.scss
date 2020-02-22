@@ -1,13 +1,7 @@
 .container {
-  max-width: 120rem;
-  margin: 8rem auto;
+  position: relative;
   background-color: var(--color-white);
   box-shadow: var(--box-shadow-big);
-
-  @include respond(tab-land) {
-    margin: 0;
-    max-width: 100%;
-  }
 }
 
 .content {

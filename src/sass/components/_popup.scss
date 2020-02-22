@@ -1,0 +1,309 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--color-black-transparent);
+  transition: all .3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__container {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &:target &__container--1 { transform: scaleY(1); }
+  &:target &__container--2 { transform: scale(1); }
+  &:target &__container--3 { transform: translateY(0%); }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    color: inherit;
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--box-shadow-small);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform .7s cubic-bezier(.39,1.33,.57,1.25) .3s;
+
+
+    &--1 {
+      flex: 0 0 60%;
+      transform-origin: bottom;
+      transform: scaleY(0);
+      flex-direction: column;
+    }
+
+    &--2 {
+      flex: 0 0 40%;
+      transform: scale(.3);
+      transition: transform .7s cubic-bezier(.39,1.33,.57,1.25);
+
+      @include respond(phone) { flex-direction: column; }
+    }
+
+    &--3 {
+      flex: 0 0 70%;
+      transform: translateY(-300%);
+      transition: transform 1s cubic-bezier(.98,1.24,.6,1.12);
+
+      @include respond(phone) { flex-direction: column; }
+      @include respond(sphone) {
+        flex: 1;
+        height: 100vh;
+      }
+    }
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex: 0 0 30%;
+    padding: 0 4rem;
+
+    &--message { padding: 0 2rem; }
+
+    &--user-menu {
+      flex: 0 0 20%;
+      align-items: stretch;
+      padding: 0;
+    }
+  }
+
+  &__paragraph {
+    flex: 1;
+    font-size: var(--big-font-size-2);
+    font-weight: 600;
+    color: var(--color-primary);
+    letter-spacing: .2rem;
+    text-transform: capitalize;
+    white-space: nowrap;
+
+    &--message {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    @include respond(phone) {
+      font-size: var(--big-font-size-1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__user {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__span {
+    display: block;
+    font-size: var(--big-font-size-2);
+    font-style: italic;
+    color: var(--color-primary);
+    text-shadow: var(--shadow-light);
+
+    @include respond(phone) { font-size: var(--big-font-size-1); }
+
+     &--bookmark { display: inline;}
+  }
+
+  &__picture { width: 50%; }
+
+  &__user-image {
+    border-radius: 50%;
+    width: 100%;
+  }
+
+  &__main {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top { display: flex; }
+
+  &__heading {
+    flex: 1;
+    display: flex;
+    padding: 1rem;
+    border-bottom: var(--line);
+    font-size: var(--big-font-size);
+    letter-spacing: .3rem;
+    white-space: nowrap;
+
+    &--message { margin-right: 4rem; }
+
+    &--user-menu {
+      justify-content: center;
+
+      @include respond(sphone) { font-size: var(--medium-font-size); }
+    }
+  }
+
+  &__icon-close {
+    position: absolute;
+    top: .6rem;
+    right: .6rem;
+    padding: .5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    fill: var(--color-grey-dark-2);
+    z-index: 1000;
+    transition: all .3s;
+
+    &:hover {
+      transform: translateY(-.2rem);
+      fill: var(--color-primary);
+
+    }
+
+    &:active { transform: translateY(0); }
+
+    &--user-menu {
+      &:hover {
+        @include respond(phone) { fill: var(--color-grey-dark-2); }
+      }
+
+      @include respond(phone) { fill: var(--color-white); }
+    }
+
+    @include respond(phone) {
+      padding: .3rem;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  &__text {
+    padding: 1rem;
+
+    @include respond(phone) { font-size: var(--medium-font-size); }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-around;
+    font-size: var(--vbig-font-size);
+    letter-spacing: .4rem;
+    font-weight: 600;
+
+    @include respond(phone) {
+      flex-flow: row wrap;
+      font-size: var(--big-font-size);
+    }
+
+    @include respond(sphone) { font-size: var(--default-font-size); }
+  }
+
+  &__item {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+    background-color: var(--color-primary);
+
+    &:first-child { background-color: var(--color-grey-light-4); }
+
+    &:hover {
+      background-color: var(--color-grey-light-4);
+      transition: all .3s;
+    }
+
+    &:active { background-color: var(--color-grey-light-2); }
+
+    @include respond(phone) { flex: 0 0 50%; }
+    @include respond(sphone) { flex: 0 0 100%; }
+  }
+
+  &__settings {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__option { padding: 0 2rem 1rem; }
+
+  &__heading-tertiary {
+    font-size: var(--big-font-size);
+    letter-spacing: .2rem;
+
+    @include respond(phone) { font-size: var(--default-font-size); }
+    @include respond(sphone) { font-size: var(--medium-font-size); }
+  }
+
+  &__radio-form {
+    display: flex;
+    padding: 1rem 0;
+  }
+
+  &__radio-group {
+    margin-left: 3.5rem;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__radio-input { display: none; }
+
+  &__radio-label {
+    position: relative;
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+
+  &__radio-button {
+    position: absolute;
+    top: -.8rem;
+    left: -3rem;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+
+    border: .5rem solid var(--color-primary);
+    border-radius: 50%;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      display: block;
+      height: 1.4rem;
+      width: 1.4rem;
+      background-color: var(--color-primary);
+      border-radius: 3rem;
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after { opacity: 1; }
+
+  &__glowing-button-box { padding: 1rem 1rem 0; }
+}

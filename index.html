@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="src/css/main.css">
+        <link rel="stylesheet" href="src/css/main.min.css">
 
         <link rel="apple-touch-icon" sizes="180x180" href="src/favi/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="src/favi/favicon-32x32.png">
@@ -43,10 +43,10 @@
 
             <div class="user-nav__list-box user-nav__list-box--1">
               <ul class="user-nav__list">
-                <li class="user-nav__item"><a href="#" class="user-nav__link">Bookmark: Tokyo flight</a></li>
-                <li class="user-nav__item"><a href="#" class="user-nav__link">Bookmark: Travel to mystery cave</a></li>
-                <li class="user-nav__item"><a href="#" class="user-nav__link">Bookmark: Rent Honda Civic ZX</a></li>
-                <li class="user-nav__item"><a href="#" class="user-nav__link">Check all bookmarks...</a></li>
+                <li class="user-nav__item"><a href="#popup-bookmark" class="user-nav__link">Bookmark: Tokyo flight</a></li>
+                <li class="user-nav__item"><a href="#popup-bookmark" class="user-nav__link">Bookmark: Travel to mystery cave</a></li>
+                <li class="user-nav__item"><a href="#popup-bookmark" class="user-nav__link">Bookmark: Rent Honda Civic ZX</a></li>
+                <li class="user-nav__item"><a href="#popup-bookmark" class="user-nav__link">Check all bookmarks...</a></li>
               </ul>
             </div>
 
@@ -59,10 +59,10 @@
 
             <div class="user-nav__list-box user-nav__list-box--2">
               <ul class="user-nav__list">
-                <li class="user-nav__item"><a href="#" class="user-nav__link">New message from: Yuki</a></li>
-                <li class="user-nav__item"><a href="#" class="user-nav__link">New message from: Raizo</a></li>
-                <li class="user-nav__item"><a href="#" class="user-nav__link">New message from: Satoshi</a></li>
-                <li class="user-nav__item"><a href="#" class="user-nav__link">Check all messages...</a></li>
+                <li class="user-nav__item"><a href="#popup-message" class="user-nav__link">New message from: Yuki</a></li>
+                <li class="user-nav__item"><a href="#popup-message" class="user-nav__link">New message from: Raizo</a></li>
+                <li class="user-nav__item"><a href="#popup-message" class="user-nav__link">New message from: Satoshi</a></li>
+                <li class="user-nav__item"><a href="#popup-message" class="user-nav__link">Check all messages...</a></li>
               </ul>
             </div>
 
@@ -73,10 +73,10 @@
 
             <div class="user-nav__list-box user-nav__list-box--3">
               <ul class="user-nav__list">
-                <li class="user-nav__item"><a href="#" class="user-nav__link">Profile</a></li>
-                <li class="user-nav__item"><a href="#" class="user-nav__link">Bookings</a></li>
-                <li class="user-nav__item"><a href="#" class="user-nav__link">Favorites</a></li>
-                <li class="user-nav__item"><a href="#" class="user-nav__link">Settings</a></li>
+                <li class="user-nav__item"><a href="#popup-user-menu" class="user-nav__link">Profile</a></li>
+                <li class="user-nav__item"><a href="#popup-user-menu" class="user-nav__link">Bookings</a></li>
+                <li class="user-nav__item"><a href="#popup-user-menu" class="user-nav__link">Favorites</a></li>
+                <li class="user-nav__item"><a href="#popup-user-menu" class="user-nav__link">Settings</a></li>
               </ul>
             </div>
           </nav>
@@ -275,6 +275,159 @@
               </button>
             </div>
           </main>
+        </div>
+
+        <div class="popup" id="popup-bookmark">
+          <div class="popup__container popup__container--1">
+            <svg class="popup__icon-close">
+              <use xlink:href="src/img/sprite-2.svg#icon-close"></use>
+            </svg>
+
+            <div class="popup__sidebar">
+              <p class="popup__paragraph">
+                Your bookmark:
+                <span class="popup__span popup__span--bookmark">
+                  Flight
+                </span>
+              </p>
+            </div>
+
+            <div class="popup__main">
+              <div class="popup__top">
+                <h2 class="popup__heading">Flight to Tokyo</h2>
+              </div>
+              <p class="popup__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup" id="popup-message">
+          <div class="popup__container popup__container--2">
+            <svg class="popup__icon-close">
+              <use xlink:href="src/img/sprite-2.svg#icon-close"></use>
+            </svg>
+            <div class="popup__sidebar popup__sidebar--message">
+              <div class="popup__paragraph popup__paragraph--message ">
+                Message from:
+                <p class="popup__user">
+                  <picture class="popup__picture">
+                    <source srcset="src/img/user-1-small.jpg 1x, src/img/user-1.jpg 2x"
+                    media="(max-width: 37.5em)">
+                    <img src="src/img/user-1.jpg" alt="User image" class="popup__user-image">
+                  </picture>
+                  <span class="popup__span">
+                    Raizo
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            <div class="popup__main">
+              <div class="popup__top">
+                <h2 class="popup__heading popup__heading--message">Important message</h2>
+              </div>
+              <p class="popup__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup" id="popup-user-menu">
+          <div class="popup__container popup__container--3">
+            <svg class="popup__icon-close popup__icon-close--user-menu">
+              <use xlink:href="src/img/sprite-2.svg#icon-close"></use>
+            </svg>
+
+            <div class="popup__sidebar popup__sidebar--user-menu">
+              <ul class="popup__list">
+                <li class="popup__item">Profile</li>
+                <li class="popup__item">Bookings</li>
+                <li class="popup__item">Favorites</li>
+                <li class="popup__item">Settings</li>
+              </ul>
+            </div>
+
+            <div class="popup__main">
+              <div class="popup__top">
+                <h2 class="popup__heading popup__heading--user-menu">Profile details</h2>
+              </div>
+
+              <div class="popup__settings">
+                <div class="popup__option">
+                  <h3 class="popup__heading-tertiary">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                  <div class="popup__radio-form">
+                    <div class="popup__radio-group">
+                      <input type="radio" class="popup__radio-input" id="option-1" name="question-1">
+                      <label for="option-1" class="popup__radio-label"><span class="popup__radio-button"></span>Option 1</label>
+                    </div>
+                    <div class="popup__radio-group">
+                      <input type="radio" class="popup__radio-input" id="option-2" name="question-1">
+                      <label for="option-2" class="popup__radio-label"><span class="popup__radio-button"></span>Option 2</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="popup__option">
+                  <h3 class="popup__heading-tertiary">Lorem ipsum dolor consectetur sit amet, consectetur adipisicing elit.</h3>
+                  <div class="popup__radio-form">
+                    <div class="popup__radio-group">
+
+                      <ul class="custom-list">
+                        <li class="custom-list__item">
+                          <label class="custom-list__label">List Item 1
+                            <input class="custom-list__input" type="checkbox"/>
+                            <span class="custom-list__span"></span>
+                          </label>
+                        </li>
+                        <li class="custom-list__item">
+                          <label class="custom-list__label">List Item 2
+                            <input class="custom-list__input" type="checkbox"/>
+                            <span class="custom-list__span"></span>
+                          </label>
+                        </li>
+                        <li class="custom-list__item">
+                          <label class="custom-list__label">List Item 3
+                            <input class="custom-list__input" type="checkbox"/>
+                            <span class="custom-list__span"></span>
+                          </label>
+                        </li>
+                        <li class="custom-list__item">
+                          <label class="custom-list__label">List Item 4
+                            <input class="custom-list__input" type="checkbox"/>
+                            <span class="custom-list__span"></span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="popup__option">
+                  <h3 class="popup__heading-tertiary">Lorem ipsum dolor sit amet, consectetur elit.</h3>
+                  <div class="popup__radio-form">
+                    <div class="popup__radio-group">
+                      <input type="radio" class="popup__radio-input" id="option-5" name="question-3">
+                      <label for="option-5" class="popup__radio-label"><span class="popup__radio-button"></span>Option 1</label>
+                    </div>
+                    <div class="popup__radio-group">
+                      <input type="radio" class="popup__radio-input" id="option-6" name="question-3">
+                      <label for="option-6" class="popup__radio-label"><span class="popup__radio-button"></span>Option 2</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="popup__option">
+                  <h3 class="popup__heading-tertiary">Lorem ipsum dolor sit?</h3>
+                  <div class="popup__glowing-button-box">
+                    <input class="glowing-button" type="checkbox" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <script src="src/js/index.js"></script>

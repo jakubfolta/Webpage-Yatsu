@@ -3,6 +3,7 @@
   --color-primary: hsl(113, 99%, 42%);
   --color-primary-dark: hsl(113, 99%, 22%);
   --color-primary-light: hsl(113, 99%, 48%);
+  --color-primary-vlight: hsl(113, 99%, 68%);
 
   --color-grey-light-1: hsl(0, 9%, 97%);
   --color-grey-light-2: hsl(0, 12%, 95%);
@@ -15,6 +16,7 @@
 
   --color-white: hsl(0, 0%, 100%);
   --color-black: hsl(0, 3%, 5%);
+  --color-black-transparent: rgba(0,0,0, .7);
 
   // Shadows
   --box-shadow-big: 1rem 2rem 4rem var(--color-black);
@@ -23,10 +25,12 @@
   --shadow-light: 0 1rem 3rem rgba(0,0,0, .4);
 
   // Fonts
+  --default-font-family: 'Josefin Sans', sans-serif;
   --default-font-size: 1.6rem;
   --small-font-size: 1.2rem;
   --medium-font-size: 1.4rem;
   --big-font-size: 2rem;
+  --big-font-size-1: 2.5rem;
   --big-font-size-2: 3rem;
   --vbig-font-size: 3.5rem;
   --huge-font-size: 4rem;
@@ -37,6 +41,7 @@
 
 body {
   font-family: 'Josefin Sans', sans-serif;
+  font-size: var(--default-font-size);
   font-weight: 400;
   line-height: 1.7;
   color: var(--color-grey-dark-2);
