@@ -251,12 +251,14 @@ body {
       background: #1a1a1a;
       transform: translateX(14rem);
       opacity: 0;
+      visibility: hidden;
       transition: all .3s; }
   .custom-list__input:checked ~ .custom-list__span::before {
     background: var(--color-primary);
     box-shadow: 0 0 0.2rem var(--color-primary-light), 0 0 0.9rem var(--color-primary-vlight);
     transform: translateX(0);
-    opacity: 1; }
+    opacity: 1;
+    visibility: visible; }
 
 .list {
   margin: 3rem 0;
