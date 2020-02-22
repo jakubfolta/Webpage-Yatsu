@@ -46,7 +46,7 @@
     }
 
     &--2 {
-      flex: 0 0 50%;
+      flex: 0 0 70%;
       transform: scale(.3);
       transition: transform .7s cubic-bezier(.39,1.33,.57,1.25);
     }
@@ -64,7 +64,9 @@
     align-items: center;
     justify-content: space-around;
     flex: 0 0 30%;
-    padding: 0 2rem;
+    padding: 0 4rem;
+
+    &--message { padding: 0 2rem; }
 
     &--user-menu {
       flex: 0 0 20%;
@@ -74,6 +76,7 @@
   }
 
   &__paragraph {
+    flex: 1;
     font-size: var(--big-font-size-2);
     font-weight: 600;
     color: var(--color-primary);
@@ -81,9 +84,17 @@
     text-transform: capitalize;
     white-space: nowrap;
 
+    &--message {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
 
     @include respond(phone) {
       font-size: var(--big-font-size-1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -101,10 +112,8 @@
     color: var(--color-primary);
     text-shadow: var(--shadow-light);
 
-    @include respond(phone) {
-      font-size: var(--big-font-size-1);
-      display: none;
-    }
+    @include respond(phone) { font-size: var(--big-font-size-1); }
+
      &--bookmark { display: inline;}
   }
 
@@ -120,30 +129,31 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
-  &__top {
-    display: flex;
-    justify-content: flex-start;
-  }
+  &__top { display: flex; }
 
   &__heading {
     flex: 1;
     display: flex;
-    justify-content: center;
-    padding: 1rem 2rem;
+    padding: .5rem 1rem;
     border-bottom: var(--line);
-    font-size: var(--default-font-size);
+    font-size: var(--big-font-size);
     letter-spacing: .3rem;
+    white-space: nowrap;
+
+    &--message { flex: 0 0 80%; }
+
+    &--user-menu { justify-content: center;}
   }
 
   &__icon-close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    top: .6rem;
+    right: .6rem;
+    padding: .5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     cursor: pointer;
     fill: var(--color-grey-dark-2);
     transition: all .3s;
@@ -154,6 +164,12 @@
     }
 
     &:active { transform: translateY(0); }
+
+    @include respond(phone) {
+      padding: .3rem;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
 
   &__text { padding: 1rem; }
