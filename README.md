@@ -3,7 +3,7 @@ Example interface for booking app.
 
 ## Check Here ==> https://jakubfolta.github.io/Webpage-Yatsu/
 
-## Better Life
+## Yatsu
 ![Webpage](./images/yatsu.jpg)
 
 ## Technologies
