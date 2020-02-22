@@ -507,7 +507,7 @@ body {
   .popup__heading {
     flex: 1;
     display: flex;
-    padding: .5rem 1rem;
+    padding: 1rem;
     border-bottom: var(--line);
     font-size: var(--big-font-size);
     letter-spacing: .3rem;
