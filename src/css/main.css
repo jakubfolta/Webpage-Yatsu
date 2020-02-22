@@ -528,12 +528,19 @@ body {
     height: 3.5rem;
     cursor: pointer;
     fill: var(--color-grey-dark-2);
+    z-index: 1000;
     transition: all .3s; }
     .popup__icon-close:hover {
       transform: translateY(-0.2rem);
       fill: var(--color-primary); }
     .popup__icon-close:active {
       transform: translateY(0); }
+    @media only screen and (max-width: 37.5em) {
+      .popup__icon-close--user-menu:hover {
+        fill: var(--color-grey-dark-2); } }
+    @media only screen and (max-width: 37.5em) {
+      .popup__icon-close--user-menu {
+        fill: var(--color-white); } }
     @media only screen and (max-width: 37.5em) {
       .popup__icon-close {
         padding: .3rem;

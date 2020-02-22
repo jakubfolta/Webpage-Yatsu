@@ -168,14 +168,24 @@
     height: 3.5rem;
     cursor: pointer;
     fill: var(--color-grey-dark-2);
+    z-index: 1000;
     transition: all .3s;
 
     &:hover {
       transform: translateY(-.2rem);
       fill: var(--color-primary);
+
     }
 
     &:active { transform: translateY(0); }
+
+    &--user-menu {
+      &:hover {
+        @include respond(phone) { fill: var(--color-grey-dark-2); }
+      }
+
+      @include respond(phone) { fill: var(--color-white); }
+    }
 
     @include respond(phone) {
       padding: .3rem;
