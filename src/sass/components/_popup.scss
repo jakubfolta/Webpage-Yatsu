@@ -1,5 +1,27 @@
 .popup {
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--color-black-transparent);
+  transition: all .3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__container {
+    visibility: visible;
+    opacity: 1;
+  }
 
   &:target &__container--1 { transform: scaleY(1); }
   &:target &__container--2 { transform: scale(1); }
