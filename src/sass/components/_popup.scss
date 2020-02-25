@@ -52,7 +52,17 @@
       @include respond(phone) { flex-direction: column; }
     }
 
-    
+    &--3 {
+      flex: 0 0 70%;
+      transform: translateY(-300%);
+      transition: transform 1s cubic-bezier(.98,1.24,.6,1.12);
+
+      @include respond(phone) { flex-direction: column; }
+      @include respond(sphone) {
+        flex: 1;
+        height: 100vh;
+      }
+    }
   }
 
   &__sidebar {
