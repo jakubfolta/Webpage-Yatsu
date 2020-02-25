@@ -37,6 +37,20 @@
     opacity: 0;
     transition: transform .7s cubic-bezier(.39,1.33,.57,1.25) .3s;
 
+    &--1 {
+      flex: 0 0 60%;
+      transform-origin: bottom;
+      transform: scaleY(0);
+      flex-direction: column;
+    }
+
+    &--2 {
+      flex: 0 0 40%;
+      transform: scale(.3);
+      transition: transform .7s cubic-bezier(.39,1.33,.57,1.25);
+
+      @include respond(phone) { flex-direction: column; }
+    }
 
     
   }

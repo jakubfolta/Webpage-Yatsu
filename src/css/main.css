@@ -422,6 +422,18 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: transform 0.7s cubic-bezier(0.39, 1.33, 0.57, 1.25) 0.3s; }
+    .popup__container--1 {
+      flex: 0 0 60%;
+      transform-origin: bottom;
+      transform: scaleY(0);
+      flex-direction: column; }
+    .popup__container--2 {
+      flex: 0 0 40%;
+      transform: scale(0.3);
+      transition: transform 0.7s cubic-bezier(0.39, 1.33, 0.57, 1.25); }
+      @media only screen and (max-width: 37.5em) {
+        .popup__container--2 {
+          flex-direction: column; } }
   .popup__sidebar {
     display: flex;
     flex-direction: column;
