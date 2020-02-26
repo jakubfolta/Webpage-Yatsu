@@ -45,7 +45,6 @@ const pageController = (function() {
   };
 
   return {
-    // Open google maps with location
     init: () => {
       setupEventListeners();
     }
