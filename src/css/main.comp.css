@@ -273,6 +273,7 @@ body {
   @media only screen and (max-width: 25em) {
     .list {
       flex-direction: column;
+      -moz-flex-direction: column;
       margin: 1rem auto;
       padding: 1rem 0; } }
   .list__item {
