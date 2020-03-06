@@ -102,7 +102,8 @@ body {
   font-size: var(--default-font-size);
   font-weight: 400;
   line-height: 1.7;
-  color: var(--color-grey-dark-2); }
+  color: var(--color-grey-dark-2);
+  -webkit-tap-highlight-color: transparent; }
 
 .btn-inline {
   color: var(--color-primary);
@@ -578,11 +579,11 @@ body {
           font-size: var(--medium-font-size); } }
   .popup__icon-close {
     position: absolute;
-    top: .6rem;
-    right: .6rem;
-    padding: .5rem;
-    width: 3.5rem;
-    height: 3.5rem;
+    top: 0rem;
+    right: 0rem;
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
     cursor: pointer;
     fill: var(--color-grey-dark-2);
     z-index: 1000;
@@ -600,9 +601,8 @@ body {
         fill: var(--color-white); } }
     @media only screen and (max-width: 37.5em) {
       .popup__icon-close {
-        padding: .3rem;
-        width: 2.5rem;
-        height: 2.5rem; } }
+        width: 4rem;
+        height: 4rem; } }
   .popup__text {
     padding: 1rem; }
     @media only screen and (max-width: 37.5em) {
