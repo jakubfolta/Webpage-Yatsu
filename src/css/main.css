@@ -98,7 +98,8 @@ body {
   font-size: var(--default-font-size);
   font-weight: 400;
   line-height: 1.7;
-  color: var(--color-grey-dark-2); }
+  color: var(--color-grey-dark-2);
+  -webkit-tap-highlight-color: transparent; }
 
 .btn-inline {
   color: var(--color-primary);
